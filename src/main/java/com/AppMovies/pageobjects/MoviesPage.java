@@ -37,10 +37,6 @@ public class MoviesPage extends Base {
         return new MoviesPage();
     }
 
-    public MyProfilePage clickMyProfile(){
-        Action.click(getDriver(),btnMyProfile);
-        return new MyProfilePage();
-    }
 
     public MovieDetailsPage clickMovieCard(){
         Action.click(getDriver(),cardMovie);
@@ -53,8 +49,6 @@ public class MoviesPage extends Base {
 
     public MyProfilePage goToProfile() throws Exception {
         Action.JSClick(getDriver(),btnMyProfile);
-        //Thread.sleep(500);
-        //Action.mouseover(getDriver(),btnMyProfile);
         return new MyProfilePage();
     }
 

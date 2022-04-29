@@ -40,4 +40,12 @@ public class MyProfilePageTest extends Base {
         boolean result = myProfile.cardIsDisplayed();
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void profileCardIsDisplayed() throws Exception {
+        moviesPage = new MoviesPage();
+        myProfile = moviesPage.goToProfile();
+        boolean result = myProfile.cardProfileDisplayed();
+        Assert.assertTrue(result);
+    }
 }
