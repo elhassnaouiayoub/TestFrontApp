@@ -8,6 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MyProfilePage extends Base {
 
+    @FindBy(className = "card1")
+    WebElement profileCard;
+
     @FindBy(id = "nameProfile")
     WebElement name;
 
@@ -17,10 +20,10 @@ public class MyProfilePage extends Base {
     @FindBy(id = "profilepage")
     WebElement profileText;
 
-    @FindBy(id = "deconnecter")
+    @FindBy(xpath = "//a[text()='Déconnecter']")
     WebElement btnDeconnecter;
 
-    @FindBy(id = "moviecard")
+    @FindBy(id = "CARDMOVIE")
     WebElement moviecard;
 
 
@@ -30,18 +33,21 @@ public class MyProfilePage extends Base {
     }
 
 
+    public boolean cardProfileDisplayed(){
+        Action.fluentWait(getDriver(),profileCard,1000);
+        return Action.isDisplayed(getDriver(),profileCard);
+    }
+
+
     public String getCurrURL(){
         return Action.getCurrentURL(getDriver());
     }
 
     public boolean cardIsDisplayed(){
+        Action.fluentWait(getDriver(),moviecard,1000);
         return Action.isDisplayed(getDriver(),moviecard);
     }
 
-
-    public boolean movieCardDisplayed(){
-        return Action.isDisplayed(getDriver(),moviecard);
-    }
 
     public boolean nameIsDisplayed(){
         return Action.isDisplayed(getDriver(),name);
@@ -58,10 +64,10 @@ public class MyProfilePage extends Base {
 
     public LoginPage clickDeconnecter() throws Exception {
         //Action.mouseover(getDriver(),btnDeconnecter);
-        Action.fluentWait(getDriver(),btnDeconnecter,2000);
-        Action.JSClick(getDriver(),btnDeconnecter);
-        /*Action.moveToElement(getDriver(),btnDeconnecter);*/
+        //Action.moveToElement(getDriver(),btnDeconnecter);
         //Action.click(getDriver(),btnDeconnecter);
+        Action.fluentWait(getDriver(),btnDeconnecter,1000);
+        Action.click(getDriver(),btnDeconnecter);
         return new LoginPage();
     }
 

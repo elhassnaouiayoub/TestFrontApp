@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extentreports>
+    <configuration>
+        <theme>standard</theme>
+        <encoding>UTF-8</encoding>
+        <protocol>http</protocol>
+        <documentTitle>ApplicationMovies</documentTitle>
+        <reportName>Application Movies Report</reportName>
+        <testViewChartLocation>bottom</testViewChartLocation>
+        <scripts>
+            <![CDATA[
+            $(document).ready(function() {
+            })
+            ]]>
+        </scripts>
+
+        <styles>
+            <![CDATA[
+        .report-name { padding-left: 180px;} .report-name > img { float:
+        left;height: 90%;margin-left: 30px;margin-top: 3px;width: auto; }
+        ]]>
+        </styles>
+    </configuration>
+</extentreports>
