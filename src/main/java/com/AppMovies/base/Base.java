@@ -3,14 +3,13 @@ package com.AppMovies.base;
 import com.AppMovies.actiondriver.Action;
 import com.AppMovies.pageobjects.LoginPage;
 import com.AppMovies.pageobjects.MoviesPage;
+import com.AppMovies.utility.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,6 +26,7 @@ public class Base {
 
     @BeforeSuite
     public void loadConfig(){
+        ExtentManager.setExtent();
         try{
             prop = new Properties();
             FileInputStream ip = new FileInputStream(
@@ -81,6 +81,10 @@ public class Base {
     }
 
 
+    @AfterSuite
+    public void afterSuite(){
+        ExtentManager.endReport();
+    }
 
 
 
