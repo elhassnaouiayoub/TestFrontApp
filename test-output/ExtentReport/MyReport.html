@@ -50,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Apr 29, 2022 03:55:48 PM</span>
+			<span class='label blue darken-3 suite-start-time'>May 1, 2022 03:39:43 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -109,10 +109,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='45.455%'><span class='strong'>10</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='77.778%'><span class='strong'>7</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='54.545%'>12</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='22.222%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -133,14 +133,14 @@
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>emptyLogin</span>
-						<span class='test-time'>Apr 29, 2022 03:55:53 PM</span>
+						<span class='test-time'>May 1, 2022 03:39:47 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:55:53 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:56:04 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+733ms</span>
+	<span class='label start-time'>May 1, 2022 03:39:47 PM</span>
+	<span class='label end-time'>May 1, 2022 03:39:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+10ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -154,7 +154,7 @@
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:56:03 PM</td>
+				<td class='timestamp'>3:39:47 PM</td>
 				<td class='step-details'>
 						<span class='badge white-text red'>emptyLogin - Test Case Failed</span>
 					
@@ -162,21 +162,40 @@
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:56:03 PM</td>
+				<td class='timestamp'>3:39:47 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
+						<span class='badge white-text red'>java.lang.AssertionError: expected [Username Or Password invalid!!] but found [Login Successfull] - Test Case Failed</span>
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:56:04 PM</td>
+				<td class='timestamp'>3:39:47 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>emptyLogin - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>3:39:47 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Login Successfull}
+  (Session info: chrome=100.0.4896.127): Login Successfull
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\AELHAS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58009}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 383047a5211247eed1ff8b3d8d552e8e - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>3:39:48 PM</td>
 				<td class='step-details'>
 						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/emptyLogin_20220429035603.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/emptyLogin_20220429035603.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/emptyLogin_20220429035603.png'>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/emptyLogin_20220501033947.png' src='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/emptyLogin_20220501033947.png' data-src='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/emptyLogin_20220501033947.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -187,14 +206,14 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>invalidEnter</span>
-						<span class='test-time'>Apr 29, 2022 03:56:09 PM</span>
+						<span class='test-time'>May 1, 2022 03:39:51 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:56:09 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:56:39 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+608ms</span>
+	<span class='label start-time'>May 1, 2022 03:39:51 PM</span>
+	<span class='label end-time'>May 1, 2022 03:39:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+702ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -208,7 +227,7 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:56:39 PM</td>
+				<td class='timestamp'>3:39:53 PM</td>
 				<td class='step-details'>
 						<span class='badge white-text red'>invalidEnter - Test Case Failed</span>
 					
@@ -216,21 +235,40 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:56:39 PM</td>
+				<td class='timestamp'>3:39:53 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
+						<span class='badge white-text red'>java.lang.AssertionError: expected [Username Or Password invalid!!] but found [Login Successfull] - Test Case Failed</span>
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:56:39 PM</td>
+				<td class='timestamp'>3:39:53 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>invalidEnter - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>3:39:53 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Login Successfull}
+  (Session info: chrome=100.0.4896.127): Login Successfull
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\AELHAS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58043}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>3:39:53 PM</td>
 				<td class='step-details'>
 						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/invalidEnter_20220429035639.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/invalidEnter_20220429035639.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/invalidEnter_20220429035639.png'>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/invalidEnter_20220501033953.png' src='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/invalidEnter_20220501033953.png' data-src='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/invalidEnter_20220501033953.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -238,176 +276,17 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>login</span>
-						<span class='test-time'>Apr 29, 2022 03:56:45 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:56:45 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:57:16 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+758ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:57:15 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>login - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:57:15 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:57:16 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/login_20220429035715.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/login_20220429035715.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/login_20220429035715.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
-					<div class='test-heading'>
-						<span class='test-name'>loginTextDisplayed</span>
-						<span class='test-time'>Apr 29, 2022 03:57:20 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:57:20 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:57:31 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+613ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:57:30 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>loginTextDisplayed - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:57:30 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>java.lang.AssertionError: expected [true] but found [false] - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:57:31 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/loginTextDisplayed_20220429035730.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/loginTextDisplayed_20220429035730.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/loginTextDisplayed_20220429035730.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
-					<div class='test-heading'>
-						<span class='test-name'>toRegister</span>
-						<span class='test-time'>Apr 29, 2022 03:57:36 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:57:36 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:57:46 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+573ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:57:46 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>toRegister - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:57:46 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:57:46 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/toRegister_20220429035746.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/toRegister_20220429035746.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/toRegister_20220429035746.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
-					<div class='test-heading'>
-						<span class='test-name'>backToAllMovies</span>
-						<span class='test-time'>Apr 29, 2022 03:57:51 PM</span>
+						<span class='test-time'>May 1, 2022 03:39:58 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:57:51 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:57:53 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+791ms</span>
+	<span class='label start-time'>May 1, 2022 03:39:58 PM</span>
+	<span class='label end-time'>May 1, 2022 03:39:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+784ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -421,9 +300,114 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:57:53 PM</td>
+				<td class='timestamp'>3:39:59 PM</td>
 				<td class='step-details'>
-						Pass Test case is: backToAllMovies
+						Pass Test case is: login
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>loginTextDisplayed</span>
+						<span class='test-time'>May 1, 2022 03:40:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 1, 2022 03:40:05 PM</span>
+	<span class='label end-time'>May 1, 2022 03:40:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+240ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:40:05 PM</td>
+				<td class='step-details'>
+						Pass Test case is: loginTextDisplayed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>toRegister</span>
+						<span class='test-time'>May 1, 2022 03:40:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 1, 2022 03:40:11 PM</span>
+	<span class='label end-time'>May 1, 2022 03:40:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+472ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:40:11 PM</td>
+				<td class='step-details'>
+						Pass Test case is: toRegister
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>InvaliedRegister</span>
+						<span class='test-time'>May 1, 2022 03:40:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 1, 2022 03:40:16 PM</span>
+	<span class='label end-time'>May 1, 2022 03:40:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+262ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:40:19 PM</td>
+				<td class='step-details'>
+						Pass Test case is: InvaliedRegister
 					
 				</td>
 			</tr>
@@ -434,15 +418,15 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
 					<div class='test-heading'>
-						<span class='test-name'>clickOnRatingBtn</span>
-						<span class='test-time'>Apr 29, 2022 03:57:57 PM</span>
+						<span class='test-name'>addUser</span>
+						<span class='test-time'>May 1, 2022 03:40:24 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:57:57 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:57:59 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+610ms</span>
+	<span class='label start-time'>May 1, 2022 03:40:24 PM</span>
+	<span class='label end-time'>May 1, 2022 03:40:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+340ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -456,9 +440,9 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:57:59 PM</td>
+				<td class='timestamp'>3:40:28 PM</td>
 				<td class='step-details'>
-						Pass Test case is: clickOnRatingBtn
+						Pass Test case is: addUser
 					
 				</td>
 			</tr>
@@ -469,15 +453,15 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
 					<div class='test-heading'>
-						<span class='test-name'>descDisplayed</span>
-						<span class='test-time'>Apr 29, 2022 03:58:03 PM</span>
+						<span class='test-name'>confirmPassword</span>
+						<span class='test-time'>May 1, 2022 03:40:32 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:58:03 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:58:05 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+573ms</span>
+	<span class='label start-time'>May 1, 2022 03:40:32 PM</span>
+	<span class='label end-time'>May 1, 2022 03:40:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+94ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -491,9 +475,9 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:58:05 PM</td>
+				<td class='timestamp'>3:40:35 PM</td>
 				<td class='step-details'>
-						Pass Test case is: descDisplayed
+						Pass Test case is: confirmPassword
 					
 				</td>
 			</tr>
@@ -504,575 +488,15 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
 					<div class='test-heading'>
-						<span class='test-name'>goToMyProfile</span>
-						<span class='test-time'>Apr 29, 2022 03:58:10 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:58:10 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:58:12 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+694ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:58:12 PM</td>
-				<td class='step-details'>
-						Pass Test case is: goToMyProfile
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
-					<div class='test-heading'>
-						<span class='test-name'>inputElementEnabled</span>
-						<span class='test-time'>Apr 29, 2022 03:58:16 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:58:16 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:58:18 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+941ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:58:18 PM</td>
-				<td class='step-details'>
-						Pass Test case is: inputElementEnabled
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
-					<div class='test-heading'>
-						<span class='test-name'>sendEmptyRatingorInvalid</span>
-						<span class='test-time'>Apr 29, 2022 03:58:23 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:58:23 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:58:25 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+855ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:58:25 PM</td>
-				<td class='step-details'>
-						Pass Test case is: sendEmptyRatingorInvalid
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
-					<div class='test-heading'>
-						<span class='test-name'>sendRatingSucces</span>
-						<span class='test-time'>Apr 29, 2022 03:58:30 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:58:30 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:58:32 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+719ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:58:32 PM</td>
-				<td class='step-details'>
-						Pass Test case is: sendRatingSucces
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
-					<div class='test-heading'>
-						<span class='test-name'>clickOnMovieCard</span>
-						<span class='test-time'>Apr 29, 2022 03:58:37 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:58:37 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:58:38 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+557ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:58:38 PM</td>
-				<td class='step-details'>
-						Pass Test case is: clickOnMovieCard
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
-					<div class='test-heading'>
-						<span class='test-name'>movieCardIsDisplayed</span>
-						<span class='test-time'>Apr 29, 2022 03:58:43 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:58:43 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:58:45 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+763ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:58:45 PM</td>
-				<td class='step-details'>
-						Pass Test case is: movieCardIsDisplayed
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
-					<div class='test-heading'>
-						<span class='test-name'>goToLoginFromProfile</span>
-						<span class='test-time'>Apr 29, 2022 03:58:49 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:58:49 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:59:10 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+901ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:59:10 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>goToLoginFromProfile - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:59:10 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>java.lang.IllegalArgumentException: Must provide a location for a move action. - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:59:10 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/goToLoginFromProfile_20220429035910.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/goToLoginFromProfile_20220429035910.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/goToLoginFromProfile_20220429035910.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='16'>
-					<div class='test-heading'>
-						<span class='test-name'>movieCardIsDisplayed</span>
-						<span class='test-time'>Apr 29, 2022 03:59:16 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:59:16 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:59:39 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+697ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:59:39 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>movieCardIsDisplayed - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:59:39 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>java.lang.AssertionError: expected [true] but found [false] - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:59:39 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/movieCardIsDisplayed_20220429035939.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/movieCardIsDisplayed_20220429035939.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/movieCardIsDisplayed_20220429035939.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
-					<div class='test-heading'>
-						<span class='test-name'>pageProfileDisplayed</span>
-						<span class='test-time'>Apr 29, 2022 03:59:45 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:59:45 PM</span>
-	<span class='label end-time'>Apr 29, 2022 03:59:45 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+123ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:59:45 PM</td>
-				<td class='step-details'>
-						Pass Test case is: pageProfileDisplayed
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='18'>
-					<div class='test-heading'>
-						<span class='test-name'>profileCardIsDisplayed</span>
-						<span class='test-time'>Apr 29, 2022 03:59:49 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 03:59:49 PM</span>
-	<span class='label end-time'>Apr 29, 2022 04:00:10 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+661ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:10 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>profileCardIsDisplayed - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:10 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>java.lang.AssertionError: expected [true] but found [false] - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:10 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/profileCardIsDisplayed_20220429040010.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/profileCardIsDisplayed_20220429040010.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/profileCardIsDisplayed_20220429040010.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='19'>
-					<div class='test-heading'>
-						<span class='test-name'>InvaliedRegister</span>
-						<span class='test-time'>Apr 29, 2022 04:00:15 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 04:00:15 PM</span>
-	<span class='label end-time'>Apr 29, 2022 04:00:25 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+588ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:25 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>InvaliedRegister - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:25 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:25 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/InvaliedRegister_20220429040025.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/InvaliedRegister_20220429040025.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/InvaliedRegister_20220429040025.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='20'>
-					<div class='test-heading'>
-						<span class='test-name'>addUser</span>
-						<span class='test-time'>Apr 29, 2022 04:00:30 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 04:00:30 PM</span>
-	<span class='label end-time'>Apr 29, 2022 04:00:41 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+633ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:40 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>addUser - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:40 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:41 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/addUser_20220429040040.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/addUser_20220429040040.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/addUser_20220429040040.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='21'>
-					<div class='test-heading'>
-						<span class='test-name'>confirmPassword</span>
-						<span class='test-time'>Apr 29, 2022 04:00:45 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 04:00:45 PM</span>
-	<span class='label end-time'>Apr 29, 2022 04:00:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+603ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:55 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>confirmPassword - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:55 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:00:56 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/confirmPassword_20220429040055.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/confirmPassword_20220429040055.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/confirmPassword_20220429040055.png'>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='22'>
-					<div class='test-heading'>
 						<span class='test-name'>goToLogin</span>
-						<span class='test-time'>Apr 29, 2022 04:01:00 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>May 1, 2022 03:40:41 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 29, 2022 04:01:00 PM</span>
-	<span class='label end-time'>Apr 29, 2022 04:01:11 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+662ms</span>
+	<span class='label start-time'>May 1, 2022 03:40:41 PM</span>
+	<span class='label end-time'>May 1, 2022 03:40:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+682ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -1084,31 +508,12 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:01:10 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:40:42 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>goToLogin - Test Case Failed</span>
+						Pass Test case is: goToLogin
 					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:01:10 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>4:01:11 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/goToLogin_20220429040110.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/goToLogin_20220429040110.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/goToLogin_20220429040110.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -1144,7 +549,7 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>22</div>
+					<div class='panel-lead'>9</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -1156,19 +561,19 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 29, 2022 03:55:48 PM</div>
+					<div class='panel-lead'>May 1, 2022 03:39:43 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 29, 2022 04:01:12 PM</div>
+			 		<div class='panel-lead'>May 1, 2022 03:40:42 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 5m 23s+714ms</div>
+					<div class='panel-lead'>0h 0m 58s+861ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -1211,14 +616,14 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 22,
-				passParent: 10,
-				failParent: 12,
+                parentCount: 9,
+				passParent: 7,
+				failParent: 2,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 12,
+				exceptionsParent: 2,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -1243,7 +648,7 @@ Driver info: driver.version: RemoteWebDriver - Test Case Failed</span>
 		</script>
 		<script>
 			var timeline = {
-			        "emptyLogin":10.733,"invalidEnter":30.608,"login":30.758,"loginTextDisplayed":10.613,"toRegister":10.573,"backToAllMovies":1.791,"clickOnRatingBtn":1.61,"descDisplayed":1.573,"goToMyProfile":1.694,"inputElementEnabled":1.941,"sendEmptyRatingorInvalid":1.855,"sendRatingSucces":2.719,"clickOnMovieCard":1.557,"movieCardIsDisplayed":1.763,"goToLoginFromProfile":20.901,"movieCardIsDisplayed":23.697,"pageProfileDisplayed":0.123,"profileCardIsDisplayed":20.661,"InvaliedRegister":10.588,"addUser":10.633,"confirmPassword":10.603,"goToLogin":10.662
+			        "emptyLogin":1.01,"invalidEnter":1.702,"login":1.784,"loginTextDisplayed":0.24,"toRegister":0.472,"InvaliedRegister":3.262,"addUser":3.34,"confirmPassword":3.094,"goToLogin":0.682
 			};
 		</script>
 		<script src='http://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

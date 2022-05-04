@@ -49,11 +49,8 @@ public class LoginPage  extends Base {
     }
 
 
-    public boolean alertDisplayed(String uname, String pass){
-        Action.type(userName, uname);
-        Action.type(password, pass);
-        Action.click(getDriver(), login);
-        return Action.isAlertPresent(getDriver());
+    public String getCurrURL(){
+        return Action.getCurrentURL(getDriver());
     }
 
     public RegisterPage goToRegister(){

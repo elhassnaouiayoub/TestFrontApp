@@ -4,6 +4,7 @@ import com.AppMovies.base.Base;
 import com.AppMovies.pageobjects.MovieDetailsPage;
 import com.AppMovies.pageobjects.MoviesPage;
 import com.AppMovies.pageobjects.MyProfilePage;
+import com.AppMovies.utility.Log;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -73,8 +74,11 @@ public class MovieDetailsPageTest extends Base {
 
     @Test
     public void goToMyProfile(){
+        Log.startTestCase("goToMyProfile");
         moviesPage = new MoviesPage();
+        Log.info("Login Success");
         movieDetailsPage = moviesPage.clickMovieCard();
+        Log.info("Go to movie's details");
         myProfilePage = movieDetailsPage.clickMyProfile();
         String actualURL = myProfilePage.getCurrURL();
         String expectedURL = "http://localhost:4200/myprofile";
