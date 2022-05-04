@@ -14,14 +14,14 @@ public class MoviesPageTest extends Base {
 
 
     @Test
-    public void movieCardIsDisplayed() throws Exception {
+    public void movieCardIsDisplayed(){
         moviesPage = new MoviesPage();
         boolean result = moviesPage.movieCardDisplayed();
         assertTrue(result);
     }
 
     @Test
-    public void clickOnMovieCard() throws Exception {
+    public void clickOnMovieCard() {
         moviesPage = new MoviesPage();
         movieDetails = moviesPage.clickMovieCard();
         String actualURL = movieDetails.getCurrURL();
