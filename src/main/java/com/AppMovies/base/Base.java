@@ -5,11 +5,13 @@ import com.AppMovies.pageobjects.LoginPage;
 import com.AppMovies.pageobjects.MoviesPage;
 import com.AppMovies.utility.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
+import org.w3c.dom.DOMConfiguration;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,6 +29,8 @@ public class Base {
     @BeforeSuite
     public void loadConfig(){
         ExtentManager.setExtent();
+        DOMConfigurator.configure("log4j.xml");
+
         try{
             prop = new Properties();
             FileInputStream ip = new FileInputStream(

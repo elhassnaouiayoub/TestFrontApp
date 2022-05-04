@@ -32,11 +32,6 @@ public class MoviesPage extends Base {
     }
 
 
-    public MoviesPage clickAllMovies(){
-        Action.click(getDriver(),btnMovies);
-        return new MoviesPage();
-    }
-
 
     public MovieDetailsPage clickMovieCard(){
         Action.click(getDriver(),cardMovie);
