@@ -1,12 +1,13 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
-import com.AppMovies.base.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage  extends Base {
+import static com.AppMovies.base.Base.getDriver;
+
+public class LoginPage   {
     @FindBy(id = "username")
     WebElement userName;
 

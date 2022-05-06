@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MyProfilePage extends Base {
+import static com.AppMovies.base.Base.getDriver;
+
+public class MyProfilePage{
 
     @FindBy(id = "deconnecter")
     WebElement btnDeconnecter ;
