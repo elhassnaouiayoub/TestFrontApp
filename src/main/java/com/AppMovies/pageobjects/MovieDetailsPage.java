@@ -1,12 +1,13 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
-import com.AppMovies.base.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MovieDetailsPage extends Base {
+import static com.AppMovies.base.Base.getDriver;
+
+public class MovieDetailsPage  {
 
     @FindBy(id = "btnRateMovie")
     WebElement btnRating;
