@@ -5,7 +5,6 @@ import com.AppMovies.base.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class MoviesPage extends Base {
 
@@ -42,8 +41,8 @@ public class MoviesPage extends Base {
         return Action.isDisplayed(getDriver(),btnMovies);
     }
 
-    public MyProfilePage goToProfile() throws Exception {
-        Action.JSClick(getDriver(),btnMyProfile);
+    public MyProfilePage goToProfile() {
+        Action.click(getDriver(),btnMyProfile);
         return new MyProfilePage();
     }
 

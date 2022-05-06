@@ -9,22 +9,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MyProfilePage extends Base {
 
-    /*@FindBy(id = "deconnecter")
-    WebElement btnDeconnecter;*/
-    WebElement btnDeconnecter =getDriver().findElement(By.id("deconnecter"));
+    @FindBy(id = "deconnecter")
+    WebElement btnDeconnecter ;
 
-    @FindBy(id = "moviecard")
-    WebElement moviecard;
-
+    @FindBy(className="mat-card-image")
+    WebElement cardImage ;
 
 
-    public void MyProfile(){
+
+    public MyProfilePage(){
         PageFactory.initElements(getDriver(),this);
     }
 
 
-    public LoginPage clickOnBtnDeconnecter() throws Exception {
-        Action.fluentWait(getDriver(),btnDeconnecter,1000);
+    public LoginPage clickOnBtnDeconnecter() {
         btnDeconnecter.click();
         return new LoginPage();
     }
@@ -34,8 +32,8 @@ public class MyProfilePage extends Base {
     }
 
     public boolean movieCardDisplayed(){
-
-        return Action.findElement(getDriver(),moviecard);
+        Action.fluentWait(getDriver(),cardImage,10);
+        return Action.isDisplayed(getDriver(),cardImage);
     }
 
 }

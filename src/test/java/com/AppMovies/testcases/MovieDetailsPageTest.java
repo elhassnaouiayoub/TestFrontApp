@@ -1,22 +1,16 @@
 package com.AppMovies.testcases;
 
 import com.AppMovies.base.Base;
-import com.AppMovies.pageobjects.MovieDetailsPage;
 import com.AppMovies.pageobjects.MoviesPage;
-import com.AppMovies.pageobjects.MyProfilePage;
 import com.AppMovies.utility.Log;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class MovieDetailsPageTest extends Base {
 
-    MovieDetailsPage movieDetailsPage;
-    MoviesPage moviesPage;
-    MyProfilePage myProfilePage;
-
-
     @Test
-    public void descDisplayed() throws Exception {
+    public void descDisplayed() {
         moviesPage = new MoviesPage();
         movieDetailsPage = moviesPage.clickMovieCard();
         boolean result = movieDetailsPage.descIsDisplayed();

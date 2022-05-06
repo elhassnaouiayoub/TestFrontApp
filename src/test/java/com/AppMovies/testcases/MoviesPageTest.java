@@ -9,10 +9,6 @@ import static org.testng.Assert.assertTrue;
 
 public class MoviesPageTest extends Base {
 
-    MoviesPage moviesPage;
-    MovieDetailsPage movieDetails;
-
-
     @Test
     public void movieCardIsDisplayed(){
         moviesPage = new MoviesPage();
@@ -23,8 +19,8 @@ public class MoviesPageTest extends Base {
     @Test
     public void clickOnMovieCard() {
         moviesPage = new MoviesPage();
-        movieDetails = moviesPage.clickMovieCard();
-        String actualURL = movieDetails.getCurrURL();
+        movieDetailsPage = moviesPage.clickMovieCard();
+        String actualURL = movieDetailsPage.getCurrURL();
         String expectedURl = "http://localhost:4200/movies/";
         assertTrue(actualURL.contains(expectedURl));
     }
