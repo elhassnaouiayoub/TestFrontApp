@@ -7,7 +7,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 
 
-public class ExtentManager extends Base {
+public class ExtentManager {
 
     public static ExtentHtmlReporter htmlReporter;
     public static ExtentReports extent;

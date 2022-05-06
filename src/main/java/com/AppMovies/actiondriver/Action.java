@@ -1,6 +1,5 @@
 package com.AppMovies.actiondriver;
 
-import com.AppMovies.base.Base;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -14,7 +13,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class Action  extends Base {
+import static com.AppMovies.base.Base.driver;
+
+public class Action {
 
     public static void scrollByVisiblityOfElement(WebDriver driver, WebElement ele) {
         JavascriptExecutor js = (JavascriptExecutor) driver;

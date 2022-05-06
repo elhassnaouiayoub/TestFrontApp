@@ -22,7 +22,19 @@ public class ListenerClass extends ExtentManager implements ITestListener{
 
     public void onTestSuccess(ITestResult result) {
         if (result.getStatus() == ITestResult.SUCCESS) {
-            test.log(Status.PASS, "Pass Test case is: " + result.getName());
+            try {
+                test.log(Status.PASS,
+                        MarkupHelper.createLabel(result.getName() + " - Test Case Passed", ExtentColor.GREEN));
+                test.log(Status.PASS,
+                        MarkupHelper.createLabel(result.getThrowable() + " - Test Case Passed", ExtentColor.GREEN));
+                String imgPath = action.screenShot(Base.getDriver(), result.getName());
+
+                test.pass("ScreenShot is Attached", MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
+
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
     }
 

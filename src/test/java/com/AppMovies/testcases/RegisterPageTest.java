@@ -7,9 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RegisterPageTest extends Base {
-    RegisterPage registerPage;
-    LoginPage loginPage;
-
 
     @Test
     public void addUser() throws InterruptedException {
