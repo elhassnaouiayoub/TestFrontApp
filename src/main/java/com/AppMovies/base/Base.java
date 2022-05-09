@@ -1,9 +1,8 @@
 package com.AppMovies.base;
 
-import com.AppMovies.actiondriver.Action;
+import com.AppMovies.actiondriver.MyScreenRecorder;
 import com.AppMovies.pageobjects.*;
 import com.AppMovies.utility.ExtentManager;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -12,6 +11,7 @@ import org.testng.annotations.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.Properties;
 
 public class Base {
@@ -48,15 +48,17 @@ public class Base {
         return driver.get();
     }
 
+    @Parameters("browser")
     @BeforeMethod
-    public void setup() throws InterruptedException {
-        factory.launchApp();
-        factory.login();
+    public void setup(Method method, String browser) throws Exception {
+        factory.launchApp(browser);
+        MyScreenRecorder.startRecording(method.getName());
     }
 
     @AfterMethod
-    public void teardown(){
+    public void teardown() throws Exception {
         getDriver().quit();
+        MyScreenRecorder.stopRecording();
     }
 
 

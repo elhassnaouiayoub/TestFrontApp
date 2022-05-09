@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="CrossBrowser">
+<suite name="CrossBrowser">
+
+    <test verbose="2" preserve-order="true" name="ChromeBrowser">
         <parameter name="browser" value="Chrome"></parameter>
         <classes>
             <class name="com.AppMovies.testcases.LoginPageTest"/>
             <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="FireFoxBrowser">
+        <parameter name="browser" value="FireFox"></parameter>
+        <classes>
             <class name="com.AppMovies.testcases.MoviesPageTest"/>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="EdgeBrowser">
+        <parameter name="browser" value="Edge"></parameter>
+        <classes>
             <class name="com.AppMovies.testcases.MyProfilePageTest"/>
             <class name="com.AppMovies.testcases.RegisterPageTest"/>
         </classes>
     </test>
 
 </suite>
-

@@ -1,14 +1,17 @@
 package com.AppMovies.testcases;
 
 import com.AppMovies.base.Base;
-import com.AppMovies.pageobjects.LoginPage;
 import com.AppMovies.pageobjects.MoviesPage;
-import com.AppMovies.pageobjects.MyProfilePage;
-import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class MyProfilePageTest extends Base {
+
+    @BeforeMethod
+    public void login() throws InterruptedException {
+        factory.login();
+    }
 
     @Test
     public void pageProfileDisplayed() throws Exception {
@@ -37,6 +40,20 @@ public class MyProfilePageTest extends Base {
         Assert.assertTrue(result);
     }
 
+    @Test
+    public void removeMovieSuccess() {
+        moviesPage = new MoviesPage();
+        myProfilePage = moviesPage.goToProfile();
+        boolean result = myProfilePage.removeMovieFromMyProfile();
+        Assert.assertTrue(result);
+    }
 
+    @Test
+    public void cancelRemoveMovie() {
+        moviesPage = new MoviesPage();
+        myProfilePage = moviesPage.goToProfile();
+        boolean result = myProfilePage.cancelRemoveMovieFromMyProfile();
+        Assert.assertTrue(result);
+    }
 
 }

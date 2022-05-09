@@ -5,6 +5,7 @@ import com.AppMovies.pageobjects.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static com.AppMovies.base.Base.*;
 
@@ -14,15 +15,20 @@ public class Factory{
     MoviesPage moviesPage;
 
 
-    public void launchApp(){
-        WebDriverManager.chromedriver().setup();
-        String browserName = prop.getProperty("browser");
+    public void launchApp(String browserName){
+        //String browserName = prop.getProperty("browser");
 
         if(browserName.equalsIgnoreCase("Chrome")){
+            WebDriverManager.chromedriver().setup();
             driver.set(new ChromeDriver());
         }
         else if(browserName.equalsIgnoreCase("Edge")){
+            WebDriverManager.edgedriver().setup();
             driver.set(new EdgeDriver());
+        }
+        else if(browserName.equalsIgnoreCase("FireFox")){
+            WebDriverManager.firefoxdriver().setup();
+            driver.set(new FirefoxDriver());
         }
 
         Action.implicitWait(getDriver(),10);
