@@ -1,12 +1,11 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
+import com.AppMovies.utility.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.ArrayList;
 
 import static com.AppMovies.base.Base.getDriver;
 
@@ -21,6 +20,8 @@ public class MyProfilePage {
     @FindBy(className = "mat-card-title")
     WebElement movieTitle;
 
+    @FindBy(className = "rating-text")
+    WebElement userRating;
 
     @FindBy(id = "btnRateMovie")
     WebElement removeMovie;
@@ -31,6 +32,35 @@ public class MyProfilePage {
     @FindBy(className = "swal2-cancel")
     WebElement cancelDelete;
 
+    @FindBy(id = "movies")
+    WebElement AllMovies;
+
+    @FindBy(xpath = "//input[@placeholder='Search']")
+    WebElement inputSearch;
+
+    @FindBy(id = "button-search")
+    WebElement btnSearch;
+
+    @FindBy(id = "cardMovie")
+    WebElement cardMovie;
+
+    @FindBy(id = "btnRateMovie")
+    WebElement btnRating;
+
+    @FindBy(className = "swal2-input")
+    WebElement enterRating;
+
+    @FindBy(xpath = "//button[text()='OK']")
+    WebElement btnOK;
+
+    @FindBy(xpath = "//button[text()='Close']")
+    WebElement closeBtn;
+
+    @FindBy (id = "myprofile")
+    WebElement btnMyProfile;
+
+    @FindBy(id = "btnStartRating")
+    WebElement btnStartRating;
 
     public MyProfilePage() {
         PageFactory.initElements(getDriver(), this);
@@ -88,6 +118,49 @@ public class MyProfilePage {
         }
         else
             return true;
+
+    }
+
+    public boolean imgMovieIsDisplayed(){
+        Action.fluentWait(getDriver(),cardImage,10);
+        return Action.isDisplayed(getDriver(),cardImage);
+    }
+
+    public boolean titleMovieIsDisplayed(){
+        return Action.isDisplayed(getDriver(),movieTitle);
+    }
+
+    public boolean userRatingMovieIsDisplayed(){
+        return Action.isDisplayed(getDriver(),userRating);
+    }
+
+    public String getTitleMovie(){
+        return movieTitle.getText();
+    }
+
+    public String getUserRatingMovie(){
+        return userRating.getText();
+    }
+
+    public MoviesPage goToAllmovies(){
+        Action.click(getDriver(),AllMovies);
+        return new MoviesPage();
+    }
+
+    public boolean updateUserRatingMovie(String rating)  {
+        if(userRating.getText().equalsIgnoreCase(rating)){
+            return false;
+        }
+        else
+            return true;
+    }
+
+    public boolean startRatingIsDisplayed(boolean res){
+        if(res == false){
+            return Action.isDisplayed(getDriver(),btnStartRating);
+        }
+        Log.info("User have a movie rating");
+        return false;
 
     }
 

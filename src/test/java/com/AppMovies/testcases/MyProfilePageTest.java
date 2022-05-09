@@ -13,6 +13,7 @@ public class MyProfilePageTest extends Base {
         factory.login();
     }
 
+
     @Test
     public void pageProfileDisplayed() throws Exception {
         moviesPage = new MoviesPage();
@@ -55,5 +56,51 @@ public class MyProfilePageTest extends Base {
         boolean result = myProfilePage.cancelRemoveMovieFromMyProfile();
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void imageMovieIsDisplayed() {
+        moviesPage = new MoviesPage();
+        boolean result = myProfilePage.imgMovieIsDisplayed();
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void titleMovieIsDisplayed() {
+        moviesPage = new MoviesPage();
+        boolean result = myProfilePage.titleMovieIsDisplayed();
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void userRatingIsDisplayed() {
+        moviesPage = new MoviesPage();
+        boolean result = myProfilePage.userRatingMovieIsDisplayed();
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void updateUserRating() throws Exception {
+        moviesPage = new MoviesPage();
+        myProfilePage = moviesPage.goToProfile();
+        String title = myProfilePage.getTitleMovie();
+        String rating = myProfilePage.getUserRatingMovie();
+        moviesPage = myProfilePage.goToAllmovies();
+        movieDetailsPage = moviesPage.searchMovieAndClick(title);
+        movieDetailsPage.addRatingAndGoToMyprofile("9.1");
+        boolean result = myProfilePage.updateUserRatingMovie(rating);
+        Assert.assertTrue(result);
+
+    }
+
+
+    @Test
+    public void startRatingIsDisplayed() {
+        moviesPage = new MoviesPage();
+        myProfilePage = moviesPage.goToProfile();
+        boolean res = myProfilePage.titleMovieIsDisplayed();
+        boolean result = myProfilePage.startRatingIsDisplayed(res);
+        Assert.assertTrue(result);
+    }
+
 
 }

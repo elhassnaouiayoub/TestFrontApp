@@ -4,11 +4,7 @@
     <test verbose="2" preserve-order="true" name="CrossBrowser">
         <parameter name="browser" value="Chrome"></parameter>
         <classes>
-            <class name="com.AppMovies.testcases.LoginPageTest"/>
-            <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
-            <class name="com.AppMovies.testcases.MoviesPageTest"/>
             <class name="com.AppMovies.testcases.MyProfilePageTest"/>
-            <class name="com.AppMovies.testcases.RegisterPageTest"/>
         </classes>
     </test>
 

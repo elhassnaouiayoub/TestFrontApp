@@ -29,6 +29,11 @@ public class MoviesPage {
     @FindBy(className = "mat-card-title")
     WebElement movieTitle;
 
+    @FindBy(className = "mat-card-image")
+    WebElement cardImage;
+
+    @FindBy(className = "rating-text")
+    WebElement officialRating;
 
     public MoviesPage(){
         PageFactory.initElements(getDriver(),this);
@@ -67,6 +72,30 @@ public class MoviesPage {
         inputSearch.sendKeys(movieName);
         Action.click(getDriver(),btnSearch);
         return Action.isDisplayed(getDriver(),moviecard);
+    }
+
+    public MovieDetailsPage searchMovieAndClick(String title) throws Exception {
+        Action.fluentWait(getDriver(),moviecard,10);
+        Action.type(inputSearch,title);
+        Action.click(getDriver(),btnSearch);
+        if(movieTitle.getText().equalsIgnoreCase(title)){
+            Action.fluentWait(getDriver(),moviecard,20);
+            Action.click(getDriver(),moviecard);
+        }
+        return new MovieDetailsPage();
+    }
+
+    public boolean imgMovieIsDisplayed(){
+        Action.fluentWait(getDriver(),cardImage,10);
+        return Action.isDisplayed(getDriver(),cardImage);
+    }
+
+    public boolean titleMovieIsDisplayed(){
+        return Action.isDisplayed(getDriver(),movieTitle);
+    }
+
+    public boolean officialRatingMovieIsDisplayed(){
+        return Action.isDisplayed(getDriver(),officialRating);
     }
 
 }

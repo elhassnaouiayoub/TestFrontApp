@@ -55,8 +55,27 @@ public class MoviesPageTest extends Base {
         String title = moviesPage.getMovieTitle();
         assertTrue(title.contains(movieName));
 
+    }
 
+    @Test
+    public void imageCardMovieIsDispalyed() {
+        moviesPage = new MoviesPage();
+        boolean result = moviesPage.imgMovieIsDisplayed();
+        Assert.assertTrue(result);
+    }
 
+    @Test
+    public void titleCardMovieIsDispalyed() {
+        moviesPage = new MoviesPage();
+        boolean result = moviesPage.titleMovieIsDisplayed();
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void officialRatingMovieIsDispalyed() {
+        moviesPage = new MoviesPage();
+        boolean result = moviesPage.officialRatingMovieIsDisplayed();
+        Assert.assertTrue(result);
     }
 
 }

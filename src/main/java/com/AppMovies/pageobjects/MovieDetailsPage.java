@@ -36,6 +36,9 @@ public class MovieDetailsPage  {
     @FindBy (id = "myprofile")
     WebElement btnMyProfile;
 
+    @FindBy(xpath = "//button[text()='Close']")
+    WebElement closeBtn;
+
     public MovieDetailsPage(){
         PageFactory.initElements(getDriver(),this);
     }
@@ -88,5 +91,17 @@ public class MovieDetailsPage  {
 
     public void clickEnterRating() throws Exception {
         Action.JSClick(getDriver(),btnRating);
+    }
+
+    public MyProfilePage addRatingAndGoToMyprofile(String rating){
+        Action.fluentWait(getDriver(),btnRating,10);
+        Action.click(getDriver(),btnRating);
+        Action.type(enterRating,rating);
+        Action.click(getDriver(),btnOK);
+        Action.click(getDriver(),closeBtn);
+        Action.fluentWait(getDriver(),btnMyProfile,10);
+        Action.click(getDriver(),btnMyProfile);
+        return new MyProfilePage();
+
     }
 }
