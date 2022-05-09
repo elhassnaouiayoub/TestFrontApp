@@ -688,7 +688,7 @@ public class Action {
                     .pollingEvery(Duration.ofSeconds(2))
                     .ignoring(Exception.class);
             wait.until(ExpectedConditions.visibilityOf(element));
-            element.click();
+            //element.click();
         }catch(Exception e) {
         }
     }
@@ -716,7 +716,7 @@ public class Action {
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
         String destination = System.getProperty("user.dir") + "\\ScreenShots\\" + filename + "_" + dateName + ".png";
-
+        String dest = "\\ScreenShots\\" + filename + "_" + dateName + ".png";
         try {
             FileUtils.copyFile(source, new File(destination));
         } catch (Exception e) {
@@ -725,7 +725,8 @@ public class Action {
         // This new path for jenkins
         String newImageString = "http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/" + filename + "_"
                 + dateName + ".png";
-        return newImageString;
+        //return newImageString;
+        return dest;
     }
 
 

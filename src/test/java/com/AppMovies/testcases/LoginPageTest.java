@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 public class LoginPageTest extends Base {
 
+
     @Test
     public void loginTextDisplayed(){
         loginPage = new LoginPage();

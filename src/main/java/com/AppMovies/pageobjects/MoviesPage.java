@@ -20,6 +20,15 @@ public class MoviesPage {
     @FindBy(id = "moviecard")
     WebElement moviecard;
 
+    @FindBy(xpath = "//input[@placeholder='Search']")
+    WebElement inputSearch;
+
+    @FindBy(id = "button-search")
+    WebElement btnSearch;
+
+    @FindBy(className = "mat-card-title")
+    WebElement movieTitle;
+
 
     public MoviesPage(){
         PageFactory.initElements(getDriver(),this);
@@ -30,6 +39,9 @@ public class MoviesPage {
         return Action.getCurrentURL(getDriver());
     }
 
+    public String getMovieTitle(){
+        return movieTitle.getText();
+    }
 
 
     public MovieDetailsPage clickMovieCard(){
@@ -49,6 +61,14 @@ public class MoviesPage {
     public boolean movieCardDisplayed(){
         return Action.isDisplayed(getDriver(),moviecard);
     }
+
+    public boolean searchMovie(String movieName) {
+        Action.fluentWait(getDriver(),moviecard,10);
+        inputSearch.sendKeys(movieName);
+        Action.click(getDriver(),btnSearch);
+        return Action.isDisplayed(getDriver(),moviecard);
+    }
+
 }
 
 
