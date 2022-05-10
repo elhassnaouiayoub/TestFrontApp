@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import static com.AppMovies.base.Base.getDriver;
+import static com.AppMovies.utility.ExtentManager.test;
 
 public class MyProfilePage {
 
@@ -122,16 +123,28 @@ public class MyProfilePage {
     }
 
     public boolean imgMovieIsDisplayed(){
-        Action.fluentWait(getDriver(),cardImage,10);
-        return Action.isDisplayed(getDriver(),cardImage);
+        Action.fluentWait(getDriver(),cardImage,5);
+        if(!(Action.isDisplayed(getDriver(),cardImage))){
+            test.info("user don't have a movie");
+            return false;
+        }
+        else return true;
     }
 
     public boolean titleMovieIsDisplayed(){
-        return Action.isDisplayed(getDriver(),movieTitle);
+        if(!(Action.isDisplayed(getDriver(),movieTitle))){
+            test.info("user don't have a movie");
+            return false;
+        }
+        else return true;
     }
 
     public boolean userRatingMovieIsDisplayed(){
-        return Action.isDisplayed(getDriver(),userRating);
+        if(!(Action.isDisplayed(getDriver(),userRating))){
+            test.info("user don't have a movie");
+            return false;
+        }
+        else return true;
     }
 
     public String getTitleMovie(){
@@ -148,20 +161,23 @@ public class MyProfilePage {
     }
 
     public boolean updateUserRatingMovie(String rating)  {
-        if(userRating.getText().equalsIgnoreCase(rating)){
-            return false;
+        Action.fluentWait(getDriver(),userRating,5);
+        if((userRating.getText()).equalsIgnoreCase(rating)){
+            return true;
         }
         else
-            return true;
+            return false;
     }
 
     public boolean startRatingIsDisplayed(boolean res){
         if(res == false){
             return Action.isDisplayed(getDriver(),btnStartRating);
         }
-        Log.info("User have a movie rating");
+        test.info("User don't have a movie");
         return false;
 
     }
+
+
 
 }

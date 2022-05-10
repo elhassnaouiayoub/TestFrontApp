@@ -79,7 +79,7 @@ public class MoviesPage {
         Action.type(inputSearch,title);
         Action.click(getDriver(),btnSearch);
         if(movieTitle.getText().equalsIgnoreCase(title)){
-            Action.fluentWait(getDriver(),moviecard,20);
+            Action.fluentWait(getDriver(),moviecard,10);
             Action.click(getDriver(),moviecard);
         }
         return new MovieDetailsPage();

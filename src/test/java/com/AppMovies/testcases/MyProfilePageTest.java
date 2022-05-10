@@ -2,16 +2,28 @@ package com.AppMovies.testcases;
 
 import com.AppMovies.base.Base;
 import com.AppMovies.pageobjects.MoviesPage;
+import org.apache.commons.lang3.RandomUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.text.DecimalFormat;
+
+import static com.AppMovies.utility.ExtentManager.test;
+
 public class MyProfilePageTest extends Base {
+
+    float trueRating = Float.valueOf(RandomUtils.nextFloat(0,10));
+    DecimalFormat decimalFormat = new DecimalFormat("#.#");
+    String formatted = decimalFormat.format(trueRating).replaceAll(",", ".");
+
 
     @BeforeMethod
     public void login() throws InterruptedException {
         factory.login();
     }
+
+
 
 
     @Test
@@ -60,20 +72,23 @@ public class MyProfilePageTest extends Base {
     @Test
     public void imageMovieIsDisplayed() {
         moviesPage = new MoviesPage();
+        myProfilePage = moviesPage.goToProfile();
         boolean result = myProfilePage.imgMovieIsDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void titleMovieIsDisplayed() {
-        moviesPage = new MoviesPage();
-        boolean result = myProfilePage.titleMovieIsDisplayed();
-        Assert.assertTrue(result);
+       moviesPage = new MoviesPage();
+       myProfilePage = moviesPage.goToProfile();
+       boolean result = myProfilePage.titleMovieIsDisplayed();
+       Assert.assertTrue(result);
     }
 
     @Test
     public void userRatingIsDisplayed() {
         moviesPage = new MoviesPage();
+        myProfilePage = moviesPage.goToProfile();
         boolean result = myProfilePage.userRatingMovieIsDisplayed();
         Assert.assertTrue(result);
     }
@@ -82,13 +97,20 @@ public class MyProfilePageTest extends Base {
     public void updateUserRating() throws Exception {
         moviesPage = new MoviesPage();
         myProfilePage = moviesPage.goToProfile();
-        String title = myProfilePage.getTitleMovie();
-        String rating = myProfilePage.getUserRatingMovie();
-        moviesPage = myProfilePage.goToAllmovies();
-        movieDetailsPage = moviesPage.searchMovieAndClick(title);
-        movieDetailsPage.addRatingAndGoToMyprofile("9.1");
-        boolean result = myProfilePage.updateUserRatingMovie(rating);
-        Assert.assertTrue(result);
+        if(myProfilePage.imgMovieIsDisplayed()){
+            String title = myProfilePage.getTitleMovie();
+            String rating = myProfilePage.getUserRatingMovie();
+            moviesPage = myProfilePage.goToAllmovies();
+            movieDetailsPage = moviesPage.searchMovieAndClick(title);
+            movieDetailsPage.addRatingAndGoToMyprofile(formatted);
+            String newRating = myProfilePage.getUserRatingMovie();
+            test.info("old rating:" + rating + "     ||     new rating:" + newRating);
+            Assert.assertTrue(myProfilePage.updateUserRatingMovie("My rating: "+formatted));
+        }
+        else {
+            test.info("user don't have movie to update");
+        }
+
 
     }
 
