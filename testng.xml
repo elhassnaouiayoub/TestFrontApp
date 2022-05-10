@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <listeners>
-        <listener class-name="com.AppMovies.utility.ListenerClass"></listener>
-    </listeners>
-    <test verbose="2" preserve-order="true" name="C:/Users/aelhassnaoui/Desktop/TestApp">
+    <test verbose="2" preserve-order="true" name="CrossBrowser">
+        <parameter name="browser" value="Chrome"></parameter>
         <classes>
-
-            <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
-            <class name="com.AppMovies.testcases.MoviesPageTest"/>
             <class name="com.AppMovies.testcases.MyProfilePageTest"/>
-
         </classes>
     </test>
+
 </suite>
+

@@ -1,19 +1,11 @@
 package com.AppMovies.testcases;
 
-import com.AppMovies.actiondriver.Action;
 import com.AppMovies.base.Base;
 import com.AppMovies.pageobjects.LoginPage;
-import com.AppMovies.pageobjects.MoviesPage;
-import com.AppMovies.pageobjects.RegisterPage;
-import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginPageTest extends Base {
-
-    LoginPage loginPage;
-    RegisterPage registerPage;
-    MoviesPage moviesPage;
 
 
     @Test
@@ -43,13 +35,12 @@ public class LoginPageTest extends Base {
     }
 
     @Test
-    public void emptyLogin() throws InterruptedException {
+    public void emptyLogin() {
         loginPage = new LoginPage();
         loginPage.Empty();
-        Alert alert = getDriver().switchTo().alert();
-        String actuelResult = alert.getText();
-        String expectedResult = "Username Or Password invalid!!";
-        Assert.assertEquals(actuelResult,expectedResult);
+        String actualURL = loginPage.getCurrURL();
+        String expectedURL = "http://localhost:4200/login";
+        Assert.assertEquals(actualURL,expectedURL);
     }
 
     @Test
@@ -58,10 +49,9 @@ public class LoginPageTest extends Base {
         String username = prop.getProperty("username");
         String password = "";
         loginPage.login(username,password);
-        Alert alert = getDriver().switchTo().alert();
-        String actuelResult = alert.getText();
-        String expectedResult = "Username Or Password invalid!!";
-        Assert.assertEquals(actuelResult,expectedResult);
+        String actualURL = loginPage.getCurrURL();
+        String expectedURL = "http://localhost:4200/login";
+        Assert.assertEquals(actualURL,expectedURL);
     }
 
 

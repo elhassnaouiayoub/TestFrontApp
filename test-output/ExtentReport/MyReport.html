@@ -50,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>May 1, 2022 03:39:43 PM</span>
+			<span class='label blue darken-3 suite-start-time'>May 9, 2022 10:04:46 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -66,7 +66,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -109,10 +108,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='77.778%'><span class='strong'>7</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>25</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='22.222%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -130,17 +129,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>emptyLogin</span>
-						<span class='test-time'>May 1, 2022 03:39:47 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>May 9, 2022 10:04:48 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 1, 2022 03:39:47 PM</span>
-	<span class='label end-time'>May 1, 2022 03:39:48 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+10ms</span>
+	<span class='label start-time'>May 9, 2022 10:04:48 AM</span>
+	<span class='label end-time'>May 9, 2022 10:04:49 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+627ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -152,50 +151,28 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:47 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:49 AM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>emptyLogin - Test Case Failed</span>
+						<span class='badge white-text green'>emptyLogin - Test Case Passed</span>
 					
 				</td>
 			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:47 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:49 AM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>java.lang.AssertionError: expected [Username Or Password invalid!!] but found [Login Successfull] - Test Case Failed</span>
+						<span class='badge white-text green'>null - Test Case Passed</span>
 					
 				</td>
 			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:47 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:49 AM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>emptyLogin - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:47 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Login Successfull}
-  (Session info: chrome=100.0.4896.127): Login Successfull
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\AELHAS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58009}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 383047a5211247eed1ff8b3d8d552e8e - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:48 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/emptyLogin_20220501033947.png' src='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/emptyLogin_20220501033947.png' data-src='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/emptyLogin_20220501033947.png'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\emptyLogin_20220509100449.png' src='\ScreenShots\emptyLogin_20220509100449.png' data-src='\ScreenShots\emptyLogin_20220509100449.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -203,17 +180,17 @@ Session ID: 383047a5211247eed1ff8b3d8d552e8e - Test Case Failed</span>
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>invalidEnter</span>
-						<span class='test-time'>May 1, 2022 03:39:51 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>May 9, 2022 10:04:52 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 1, 2022 03:39:51 PM</span>
-	<span class='label end-time'>May 1, 2022 03:39:53 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+702ms</span>
+	<span class='label start-time'>May 9, 2022 10:04:52 AM</span>
+	<span class='label end-time'>May 9, 2022 10:04:53 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+375ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -225,50 +202,28 @@ Session ID: 383047a5211247eed1ff8b3d8d552e8e - Test Case Failed</span>
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:53 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:53 AM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>invalidEnter - Test Case Failed</span>
+						<span class='badge white-text green'>invalidEnter - Test Case Passed</span>
 					
 				</td>
 			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:53 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:53 AM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>java.lang.AssertionError: expected [Username Or Password invalid!!] but found [Login Successfull] - Test Case Failed</span>
+						<span class='badge white-text green'>null - Test Case Passed</span>
 					
 				</td>
 			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:53 PM</td>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:53 AM</td>
 				<td class='step-details'>
-						<span class='badge white-text red'>invalidEnter - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:53 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Login Successfull}
-  (Session info: chrome=100.0.4896.127): Login Successfull
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RABH3FVSG3', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\AELHAS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58043}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>3:39:53 PM</td>
-				<td class='step-details'>
-						ScreenShot is Attached
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/invalidEnter_20220501033953.png' src='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/invalidEnter_20220501033953.png' data-src='http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/invalidEnter_20220501033953.png'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\invalidEnter_20220509100453.png' src='\ScreenShots\invalidEnter_20220509100453.png' data-src='\ScreenShots\invalidEnter_20220509100453.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -279,14 +234,14 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>login</span>
-						<span class='test-time'>May 1, 2022 03:39:58 PM</span>
+						<span class='test-time'>May 9, 2022 10:04:56 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 1, 2022 03:39:58 PM</span>
-	<span class='label end-time'>May 1, 2022 03:39:59 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+784ms</span>
+	<span class='label start-time'>May 9, 2022 10:04:56 AM</span>
+	<span class='label end-time'>May 9, 2022 10:04:57 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+427ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -300,10 +255,26 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:39:59 PM</td>
+				<td class='timestamp'>10:04:57 AM</td>
 				<td class='step-details'>
-						Pass Test case is: login
+						<span class='badge white-text green'>login - Test Case Passed</span>
 					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:57 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:57 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\login_20220509100457.png' src='\ScreenShots\login_20220509100457.png' data-src='\ScreenShots\login_20220509100457.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -314,14 +285,14 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
 					<div class='test-heading'>
 						<span class='test-name'>loginTextDisplayed</span>
-						<span class='test-time'>May 1, 2022 03:40:05 PM</span>
+						<span class='test-time'>May 9, 2022 10:05:00 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 1, 2022 03:40:05 PM</span>
-	<span class='label end-time'>May 1, 2022 03:40:05 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+240ms</span>
+	<span class='label start-time'>May 9, 2022 10:05:00 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:00 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+327ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -335,10 +306,26 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:40:05 PM</td>
+				<td class='timestamp'>10:05:00 AM</td>
 				<td class='step-details'>
-						Pass Test case is: loginTextDisplayed
+						<span class='badge white-text green'>loginTextDisplayed - Test Case Passed</span>
 					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:00 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:00 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\loginTextDisplayed_20220509100500.png' src='\ScreenShots\loginTextDisplayed_20220509100500.png' data-src='\ScreenShots\loginTextDisplayed_20220509100500.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -349,14 +336,14 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
 					<div class='test-heading'>
 						<span class='test-name'>toRegister</span>
-						<span class='test-time'>May 1, 2022 03:40:11 PM</span>
+						<span class='test-time'>May 9, 2022 10:05:03 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 1, 2022 03:40:11 PM</span>
-	<span class='label end-time'>May 1, 2022 03:40:11 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+472ms</span>
+	<span class='label start-time'>May 9, 2022 10:05:03 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:03 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+522ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -370,10 +357,26 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:40:11 PM</td>
+				<td class='timestamp'>10:05:03 AM</td>
 				<td class='step-details'>
-						Pass Test case is: toRegister
+						<span class='badge white-text green'>toRegister - Test Case Passed</span>
 					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:03 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:03 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\toRegister_20220509100503.png' src='\ScreenShots\toRegister_20220509100503.png' data-src='\ScreenShots\toRegister_20220509100503.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -384,14 +387,14 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
 					<div class='test-heading'>
 						<span class='test-name'>InvaliedRegister</span>
-						<span class='test-time'>May 1, 2022 03:40:16 PM</span>
+						<span class='test-time'>May 9, 2022 10:05:06 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 1, 2022 03:40:16 PM</span>
-	<span class='label end-time'>May 1, 2022 03:40:19 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+262ms</span>
+	<span class='label start-time'>May 9, 2022 10:05:06 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:09 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+615ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -405,10 +408,26 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:40:19 PM</td>
+				<td class='timestamp'>10:05:08 AM</td>
 				<td class='step-details'>
-						Pass Test case is: InvaliedRegister
+						<span class='badge white-text green'>InvaliedRegister - Test Case Passed</span>
 					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:08 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:09 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\InvaliedRegister_20220509100508.png' src='\ScreenShots\InvaliedRegister_20220509100508.png' data-src='\ScreenShots\InvaliedRegister_20220509100508.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -419,14 +438,14 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
 					<div class='test-heading'>
 						<span class='test-name'>addUser</span>
-						<span class='test-time'>May 1, 2022 03:40:24 PM</span>
+						<span class='test-time'>May 9, 2022 10:05:11 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 1, 2022 03:40:24 PM</span>
-	<span class='label end-time'>May 1, 2022 03:40:28 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+340ms</span>
+	<span class='label start-time'>May 9, 2022 10:05:11 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:14 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+514ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -440,10 +459,26 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:40:28 PM</td>
+				<td class='timestamp'>10:05:14 AM</td>
 				<td class='step-details'>
-						Pass Test case is: addUser
+						<span class='badge white-text green'>addUser - Test Case Passed</span>
 					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:14 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:14 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\addUser_20220509100514.png' src='\ScreenShots\addUser_20220509100514.png' data-src='\ScreenShots\addUser_20220509100514.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -454,14 +489,14 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
 					<div class='test-heading'>
 						<span class='test-name'>confirmPassword</span>
-						<span class='test-time'>May 1, 2022 03:40:32 PM</span>
+						<span class='test-time'>May 9, 2022 10:05:17 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 1, 2022 03:40:32 PM</span>
-	<span class='label end-time'>May 1, 2022 03:40:35 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+94ms</span>
+	<span class='label start-time'>May 9, 2022 10:05:17 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:19 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+397ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -475,10 +510,26 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:40:35 PM</td>
+				<td class='timestamp'>10:05:19 AM</td>
 				<td class='step-details'>
-						Pass Test case is: confirmPassword
+						<span class='badge white-text green'>confirmPassword - Test Case Passed</span>
 					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:19 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:19 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\confirmPassword_20220509100519.png' src='\ScreenShots\confirmPassword_20220509100519.png' data-src='\ScreenShots\confirmPassword_20220509100519.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -489,14 +540,14 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
 					<div class='test-heading'>
 						<span class='test-name'>goToLogin</span>
-						<span class='test-time'>May 1, 2022 03:40:41 PM</span>
+						<span class='test-time'>May 9, 2022 10:05:23 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>May 1, 2022 03:40:41 PM</span>
-	<span class='label end-time'>May 1, 2022 03:40:42 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+682ms</span>
+	<span class='label start-time'>May 9, 2022 10:05:23 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:23 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+707ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -510,10 +561,842 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:40:42 PM</td>
+				<td class='timestamp'>10:05:23 AM</td>
 				<td class='step-details'>
-						Pass Test case is: goToLogin
+						<span class='badge white-text green'>goToLogin - Test Case Passed</span>
 					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:23 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:23 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\goToLogin_20220509100523.png' src='\ScreenShots\goToLogin_20220509100523.png' data-src='\ScreenShots\goToLogin_20220509100523.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>backToAllMovies</span>
+						<span class='test-time'>May 9, 2022 10:05:27 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:05:27 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:29 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+32ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:29 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>backToAllMovies - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:29 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:29 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\backToAllMovies_20220509100529.png' src='\ScreenShots\backToAllMovies_20220509100529.png' data-src='\ScreenShots\backToAllMovies_20220509100529.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>clickOnRatingBtn</span>
+						<span class='test-time'>May 9, 2022 10:05:33 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:05:33 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:34 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+450ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:34 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>clickOnRatingBtn - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:34 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:34 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\clickOnRatingBtn_20220509100534.png' src='\ScreenShots\clickOnRatingBtn_20220509100534.png' data-src='\ScreenShots\clickOnRatingBtn_20220509100534.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>descDisplayed</span>
+						<span class='test-time'>May 9, 2022 10:05:38 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:05:38 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:40 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+622ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:40 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>descDisplayed - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:40 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:40 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\descDisplayed_20220509100540.png' src='\ScreenShots\descDisplayed_20220509100540.png' data-src='\ScreenShots\descDisplayed_20220509100540.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>goToMyProfile</span>
+						<span class='test-time'>May 9, 2022 10:05:44 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:05:44 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:45 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+557ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:45 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>goToMyProfile - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:45 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:45 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\goToMyProfile_20220509100545.png' src='\ScreenShots\goToMyProfile_20220509100545.png' data-src='\ScreenShots\goToMyProfile_20220509100545.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>inputElementEnabled</span>
+						<span class='test-time'>May 9, 2022 10:05:49 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:05:49 AM</span>
+	<span class='label end-time'>May 9, 2022 10:05:51 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+583ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:50 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>inputElementEnabled - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:50 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:51 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\inputElementEnabled_20220509100550.png' src='\ScreenShots\inputElementEnabled_20220509100550.png' data-src='\ScreenShots\inputElementEnabled_20220509100550.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>sendEmptyRatingorInvalid</span>
+						<span class='test-time'>May 9, 2022 10:05:55 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:05:55 AM</span>
+	<span class='label end-time'>May 9, 2022 10:06:00 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+679ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:00 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>sendEmptyRatingorInvalid - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:00 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:00 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\sendEmptyRatingorInvalid_20220509100600.png' src='\ScreenShots\sendEmptyRatingorInvalid_20220509100600.png' data-src='\ScreenShots\sendEmptyRatingorInvalid_20220509100600.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>sendRatingSucces</span>
+						<span class='test-time'>May 9, 2022 10:06:04 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:06:04 AM</span>
+	<span class='label end-time'>May 9, 2022 10:06:08 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+463ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:07 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>sendRatingSucces - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:07 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:08 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\sendRatingSucces_20220509100607.png' src='\ScreenShots\sendRatingSucces_20220509100607.png' data-src='\ScreenShots\sendRatingSucces_20220509100607.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>clickOnMovieCard</span>
+						<span class='test-time'>May 9, 2022 10:06:13 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:06:13 AM</span>
+	<span class='label end-time'>May 9, 2022 10:06:15 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+361ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:15 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>clickOnMovieCard - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:15 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:15 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\clickOnMovieCard_20220509100615.png' src='\ScreenShots\clickOnMovieCard_20220509100615.png' data-src='\ScreenShots\clickOnMovieCard_20220509100615.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>movieCardIsDisplayed</span>
+						<span class='test-time'>May 9, 2022 10:06:19 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:06:19 AM</span>
+	<span class='label end-time'>May 9, 2022 10:06:22 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+620ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:21 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>movieCardIsDisplayed - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:21 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:22 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\movieCardIsDisplayed_20220509100621.png' src='\ScreenShots\movieCardIsDisplayed_20220509100621.png' data-src='\ScreenShots\movieCardIsDisplayed_20220509100621.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>searchAvalaibleMovie</span>
+						<span class='test-time'>May 9, 2022 10:06:25 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:06:25 AM</span>
+	<span class='label end-time'>May 9, 2022 10:06:28 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+908ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:28 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>searchAvalaibleMovie - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:28 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:28 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\searchAvalaibleMovie_20220509100628.png' src='\ScreenShots\searchAvalaibleMovie_20220509100628.png' data-src='\ScreenShots\searchAvalaibleMovie_20220509100628.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>searchInvalaibleMovie</span>
+						<span class='test-time'>May 9, 2022 10:06:32 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:06:32 AM</span>
+	<span class='label end-time'>May 9, 2022 10:06:45 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+901ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:45 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>searchInvalaibleMovie - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:45 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:45 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\searchInvalaibleMovie_20220509100645.png' src='\ScreenShots\searchInvalaibleMovie_20220509100645.png' data-src='\ScreenShots\searchInvalaibleMovie_20220509100645.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>cancelRemoveMovie</span>
+						<span class='test-time'>May 9, 2022 10:06:49 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:06:49 AM</span>
+	<span class='label end-time'>May 9, 2022 10:06:51 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+879ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:50 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>cancelRemoveMovie - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:50 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:51 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\cancelRemoveMovie_20220509100650.png' src='\ScreenShots\cancelRemoveMovie_20220509100650.png' data-src='\ScreenShots\cancelRemoveMovie_20220509100650.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>goToLoginPage</span>
+						<span class='test-time'>May 9, 2022 10:06:54 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:06:54 AM</span>
+	<span class='label end-time'>May 9, 2022 10:06:55 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+532ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:55 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>goToLoginPage - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:55 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:06:55 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\goToLoginPage_20220509100655.png' src='\ScreenShots\goToLoginPage_20220509100655.png' data-src='\ScreenShots\goToLoginPage_20220509100655.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>isMovieCardDsiplayed</span>
+						<span class='test-time'>May 9, 2022 10:06:59 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:06:59 AM</span>
+	<span class='label end-time'>May 9, 2022 10:07:02 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+753ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:07:01 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>isMovieCardDsiplayed - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:07:01 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:07:02 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\isMovieCardDsiplayed_20220509100701.png' src='\ScreenShots\isMovieCardDsiplayed_20220509100701.png' data-src='\ScreenShots\isMovieCardDsiplayed_20220509100701.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>pageProfileDisplayed</span>
+						<span class='test-time'>May 9, 2022 10:07:05 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:07:05 AM</span>
+	<span class='label end-time'>May 9, 2022 10:07:06 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+308ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:07:05 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>pageProfileDisplayed - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:07:05 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:07:06 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\pageProfileDisplayed_20220509100705.png' src='\ScreenShots\pageProfileDisplayed_20220509100705.png' data-src='\ScreenShots\pageProfileDisplayed_20220509100705.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>removeMovieSuccess</span>
+						<span class='test-time'>May 9, 2022 10:07:09 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2022 10:07:09 AM</span>
+	<span class='label end-time'>May 9, 2022 10:07:11 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+645ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:07:10 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>removeMovieSuccess - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:07:10 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>null - Test Case Passed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:07:11 AM</td>
+				<td class='step-details'>
+						ScreenShot is attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='\ScreenShots\removeMovieSuccess_20220509100710.png' src='\ScreenShots\removeMovieSuccess_20220509100710.png' data-src='\ScreenShots\removeMovieSuccess_20220509100710.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -549,7 +1432,7 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>9</div>
+					<div class='panel-lead'>25</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -561,19 +1444,19 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 1, 2022 03:39:43 PM</div>
+					<div class='panel-lead'>May 9, 2022 10:04:46 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 1, 2022 03:40:42 PM</div>
+			 		<div class='panel-lead'>May 9, 2022 10:07:12 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 58s+861ms</div>
+					<div class='panel-lead'>0h 2m 25s+950ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -616,14 +1499,14 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 9,
-				passParent: 7,
-				failParent: 2,
+                parentCount: 25,
+				passParent: 25,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 2,
+				exceptionsParent: 0,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -648,7 +1531,7 @@ Session ID: d21915bc4ac6de814f1ce776d63e7421 - Test Case Failed</span>
 		</script>
 		<script>
 			var timeline = {
-			        "emptyLogin":1.01,"invalidEnter":1.702,"login":1.784,"loginTextDisplayed":0.24,"toRegister":0.472,"InvaliedRegister":3.262,"addUser":3.34,"confirmPassword":3.094,"goToLogin":0.682
+			        "emptyLogin":0.627,"invalidEnter":1.375,"login":1.427,"loginTextDisplayed":0.327,"toRegister":0.522,"InvaliedRegister":2.615,"addUser":2.514,"confirmPassword":2.397,"goToLogin":0.707,"backToAllMovies":2.032,"clickOnRatingBtn":1.45,"descDisplayed":1.622,"goToMyProfile":1.557,"inputElementEnabled":1.583,"sendEmptyRatingorInvalid":5.679,"sendRatingSucces":3.463,"clickOnMovieCard":2.361,"movieCardIsDisplayed":2.62,"searchAvalaibleMovie":2.908,"searchInvalaibleMovie":12.901,"cancelRemoveMovie":1.879,"goToLoginPage":0.532,"isMovieCardDsiplayed":2.753,"pageProfileDisplayed":0.308,"removeMovieSuccess":1.645
 			};
 		</script>
 		<script src='http://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

@@ -1,22 +1,36 @@
 package com.AppMovies.testcases;
 
 import com.AppMovies.base.Base;
-import com.AppMovies.pageobjects.MovieDetailsPage;
 import com.AppMovies.pageobjects.MoviesPage;
-import com.AppMovies.pageobjects.MyProfilePage;
 import com.AppMovies.utility.Log;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang3.RandomUtils;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.text.DecimalFormat;
+
 
 public class MovieDetailsPageTest extends Base {
 
-    MovieDetailsPage movieDetailsPage;
-    MoviesPage moviesPage;
-    MyProfilePage myProfilePage;
 
+    /*float trueRating = Float.valueOf(RandomUtils.nextFloat());
+    DecimalFormat decimalFormat = new DecimalFormat("#.#");
+    String formatted = decimalFormat.format(trueRating);*/
+
+
+    int length = 2;
+    String falseRating = RandomStringUtils.random(length, true, false);
+
+
+    @BeforeMethod
+    public void login() throws InterruptedException {
+        factory.login();
+    }
 
     @Test
-    public void descDisplayed() throws Exception {
+    public void descDisplayed() {
         moviesPage = new MoviesPage();
         movieDetailsPage = moviesPage.clickMovieCard();
         boolean result = movieDetailsPage.descIsDisplayed();
@@ -47,7 +61,7 @@ public class MovieDetailsPageTest extends Base {
         moviesPage = new MoviesPage();
         movieDetailsPage = moviesPage.clickMovieCard();
         movieDetailsPage.clickEnterRating();
-        movieDetailsPage.setEnterRating((float) 9.2);
+        movieDetailsPage.setEnterRating(5.5F);
         boolean result = movieDetailsPage.successElemIsDisplayed();
         Assert.assertTrue(result);
     }
@@ -57,7 +71,7 @@ public class MovieDetailsPageTest extends Base {
         moviesPage = new MoviesPage();
         movieDetailsPage = moviesPage.clickMovieCard();
         movieDetailsPage.clickEnterRating();
-        movieDetailsPage.setEmptyRating("jhjk");
+        movieDetailsPage.setEmptyRating(falseRating);
         boolean result = movieDetailsPage.errorElemIsDisplayed();
         Assert.assertTrue(result);
     }

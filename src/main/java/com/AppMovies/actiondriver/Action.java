@@ -1,6 +1,5 @@
 package com.AppMovies.actiondriver;
 
-import com.AppMovies.base.Base;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -14,7 +13,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class Action  extends Base {
+import static com.AppMovies.base.Base.driver;
+
+public class Action {
 
     public static void scrollByVisiblityOfElement(WebDriver driver, WebElement ele) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -687,7 +688,7 @@ public class Action  extends Base {
                     .pollingEvery(Duration.ofSeconds(2))
                     .ignoring(Exception.class);
             wait.until(ExpectedConditions.visibilityOf(element));
-            element.click();
+            //element.click();
         }catch(Exception e) {
         }
     }
@@ -715,7 +716,7 @@ public class Action  extends Base {
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
         String destination = System.getProperty("user.dir") + "\\ScreenShots\\" + filename + "_" + dateName + ".png";
-
+        String dest = "\\ScreenShots\\" + filename + "_" + dateName + ".png";
         try {
             FileUtils.copyFile(source, new File(destination));
         } catch (Exception e) {
@@ -724,7 +725,8 @@ public class Action  extends Base {
         // This new path for jenkins
         String newImageString = "http://localhost:4200/job/ApplicationMovies/ws/ApplicationMovies/ScreenShots/" + filename + "_"
                 + dateName + ".png";
-        return newImageString;
+        //return newImageString;
+        return dest;
     }
 
 

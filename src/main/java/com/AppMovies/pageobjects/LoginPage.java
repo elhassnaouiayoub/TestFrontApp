@@ -1,16 +1,13 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
-import com.AppMovies.base.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import javax.swing.*;
+import static com.AppMovies.base.Base.getDriver;
 
-import static java.sql.DriverManager.getDriver;
-
-public class LoginPage  extends Base {
+public class LoginPage   {
     @FindBy(id = "username")
     WebElement userName;
 
@@ -31,9 +28,8 @@ public class LoginPage  extends Base {
         PageFactory.initElements(getDriver(), this);
     }
 
-    public void Empty() throws InterruptedException {
+    public void Empty() {
         Action.click(getDriver(),login);
-        Thread.sleep(500);
     }
 
     public boolean logintextIsDisplayed(){

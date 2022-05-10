@@ -1,12 +1,13 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
-import com.AppMovies.base.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MovieDetailsPage extends Base {
+import static com.AppMovies.base.Base.getDriver;
+
+public class MovieDetailsPage  {
 
     @FindBy(id = "btnRateMovie")
     WebElement btnRating;
@@ -34,6 +35,9 @@ public class MovieDetailsPage extends Base {
 
     @FindBy (id = "myprofile")
     WebElement btnMyProfile;
+
+    @FindBy(xpath = "//button[text()='Close']")
+    WebElement closeBtn;
 
     public MovieDetailsPage(){
         PageFactory.initElements(getDriver(),this);
@@ -87,5 +91,17 @@ public class MovieDetailsPage extends Base {
 
     public void clickEnterRating() throws Exception {
         Action.JSClick(getDriver(),btnRating);
+    }
+
+    public MyProfilePage addRatingAndGoToMyprofile(String rating){
+        Action.fluentWait(getDriver(),btnRating,10);
+        Action.click(getDriver(),btnRating);
+        Action.type(enterRating,rating);
+        Action.click(getDriver(),btnOK);
+        Action.click(getDriver(),closeBtn);
+        Action.fluentWait(getDriver(),btnMyProfile,10);
+        Action.click(getDriver(),btnMyProfile);
+        return new MyProfilePage();
+
     }
 }

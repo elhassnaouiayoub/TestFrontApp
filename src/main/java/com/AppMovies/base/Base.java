@@ -1,29 +1,29 @@
 package com.AppMovies.base;
 
-import com.AppMovies.actiondriver.Action;
-import com.AppMovies.pageobjects.LoginPage;
-import com.AppMovies.pageobjects.MoviesPage;
+import com.AppMovies.actiondriver.MyScreenRecorder;
+import com.AppMovies.pageobjects.*;
 import com.AppMovies.utility.ExtentManager;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
-import org.w3c.dom.DOMConfiguration;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.Properties;
 
 public class Base {
 
     public static Properties prop;
     public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
-    LoginPage loginPage;
-    MoviesPage moviesPage;
+    protected Factory factory = new Factory();
+    protected LoginPage loginPage;
+    protected MoviesPage moviesPage;
+    protected RegisterPage registerPage;
+    protected MovieDetailsPage movieDetailsPage;
+    protected MyProfilePage myProfilePage;
 
 
     @BeforeSuite
@@ -48,41 +48,19 @@ public class Base {
         return driver.get();
     }
 
+    @Parameters("browser")
     @BeforeMethod
-    public void setup() throws InterruptedException {
-        launchApp();
-        login();
+    public void setup(Method method, String browser) throws Exception {
+        factory.launchApp(browser);
+        MyScreenRecorder.startRecording(method.getName());
     }
 
     @AfterMethod
-    public void teardown(){
+    public void teardown() throws Exception {
         getDriver().quit();
+        MyScreenRecorder.stopRecording();
     }
 
-    public void launchApp(){
-        WebDriverManager.chromedriver().setup();
-        String browserName = prop.getProperty("browser");
-
-        if(browserName.equalsIgnoreCase("Chrome")){
-            driver.set(new ChromeDriver());
-        }
-        else if(browserName.equalsIgnoreCase("Edge")){
-            driver.set(new EdgeDriver());
-        }
-
-        Action.implicitWait(getDriver(),10);
-        Action.pageLoadTimeOut(getDriver(),20);
-        getDriver().manage().window().maximize();
-        getDriver().get(prop.getProperty("url"));
-    }
-
-    public void login() throws InterruptedException {
-        loginPage = new LoginPage();
-        String username = prop.getProperty("username");
-        String password = prop.getProperty("password");
-        moviesPage = loginPage.login(username,password);
-        getDriver().switchTo().alert().accept();
-    }
 
 
     @AfterSuite
