@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ee64eddb-2c1b-4978-9465-df346724d906" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Logs/log4j.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/log4j.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/AppMovies/base/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/AppMovies/base/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/AppMovies/utility/ExtentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/AppMovies/utility/ExtentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/AppMovies/utility/ListenerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/AppMovies/utility/ListenerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/AppMovies/base/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/AppMovies/base/Factory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/AppMovies/pageobjects/MyProfilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/AppMovies/pageobjects/MyProfilePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/AppMovies/utility/ExtentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/AppMovies/utility/ExtentManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/AppMovies/testcases/MyProfilePageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/AppMovies/testcases/MyProfilePageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/ExtentReport/MyReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_all.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng_crossBrowser.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng_crossbrowser.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28QbdEyo5zd0G7NbK7E4UCRHR0u" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestAPI" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.AppMovies.pageobjects" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/aelhassnaoui/Desktop/TestApp/testng_crossbrowser.xml">
+    <configuration name="C:/Users/aelhassnaoui/Desktop/TestApp/testng_crossBrowser.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testAppMovie" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_crossBrowser.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/aelhassnaoui/Desktop/TestApp/testng_crossbrowser.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testAppMovie" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_crossbrowser.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/aelhassnaoui/Desktop/TestApp/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testAppMovie" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyProfilePageTest.imageCardMovieIsDispalyed" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testAppMovie" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.AppMovies.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.AppMovies.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.AppMovies.testcases.MyProfilePageTest" />
+      <option name="METHOD_NAME" value="imageCardMovieIsDispalyed" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyProfilePageTest.updateUserRating" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testAppMovie" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.AppMovies.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.AppMovies.testcases" />
+      <option name="MAIN_CLASS_NAME" value="com.AppMovies.testcases.MyProfilePageTest" />
+      <option name="METHOD_NAME" value="updateUserRating" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/aelhassnaoui/Desktop/TestApp/testng_crossbrowser.xml" />
+        <item itemvalue="TestNG.C:/Users/aelhassnaoui/Desktop/TestApp/testng.xml" />
+        <item itemvalue="TestNG.C:/Users/aelhassnaoui/Desktop/TestApp/testng_crossBrowser.xml" />
+        <item itemvalue="TestNG.MyProfilePageTest.updateUserRating" />
+        <item itemvalue="TestNG.MyProfilePageTest.imageCardMovieIsDispalyed" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee64eddb-2c1b-4978-9465-df346724d906" name="Changes" comment="" />
+      <created>1651151845181</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651151845181</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
