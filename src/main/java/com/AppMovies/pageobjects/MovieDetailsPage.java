@@ -93,14 +93,14 @@ public class MovieDetailsPage  {
         Action.JSClick(getDriver(),btnRating);
     }
 
-    public MyProfilePage addRatingAndGoToMyprofile(String rating){
+    public MyProfilePage addRatingAndGoToMyprofile(String rating) throws Exception {
         Action.fluentWait(getDriver(),btnRating,10);
-        Action.click(getDriver(),btnRating);
+        Action.JSClick(getDriver(),btnRating);
         Action.type(enterRating,rating);
         Action.click(getDriver(),btnOK);
-        Action.click(getDriver(),closeBtn);
+        Action.JSClick(getDriver(),closeBtn);
         Action.fluentWait(getDriver(),btnMyProfile,10);
-        Action.click(getDriver(),btnMyProfile);
+        Action.JSClick(getDriver(),btnMyProfile);
         return new MyProfilePage();
 
     }
