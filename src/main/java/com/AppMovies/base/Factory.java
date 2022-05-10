@@ -16,7 +16,6 @@ public class Factory{
 
 
     public void launchApp(String browserName){
-        WebDriverManager.firefoxdriver().setup();
         //String browserName = prop.getProperty("browser");
 
         if(browserName.equalsIgnoreCase("Chrome")){
