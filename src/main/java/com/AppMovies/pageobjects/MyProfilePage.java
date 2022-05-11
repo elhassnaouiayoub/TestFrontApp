@@ -161,9 +161,9 @@ public class MyProfilePage {
         return userRating.getText();
     }
 
-    public MoviesPage goToAllmovies(){
-        Action.click(getDriver(),AllMovies);
-        return new MoviesPage();
+    public MovieDetailsPage goToAllmovies(){
+        Action.click(getDriver(),movieTitle);
+        return new MovieDetailsPage();
     }
 
     public boolean updateUserRatingMovie(String rating)  {

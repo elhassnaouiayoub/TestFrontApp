@@ -25,7 +25,7 @@ public class MyProfilePageTest extends Base {
 
 
 
-    @Test
+    /*@Test
     public void pageProfileDisplayed() {
         moviesPage = new MoviesPage();
         myProfilePage = moviesPage.goToProfile();
@@ -90,17 +90,15 @@ public class MyProfilePageTest extends Base {
         myProfilePage = moviesPage.goToProfile();
         boolean result = myProfilePage.userRatingMovieIsDisplayed();
         Assert.assertTrue(result);
-    }
+    }*/
 
     @Test
     public void updateUserRating() throws Exception {
         moviesPage = new MoviesPage();
         myProfilePage = moviesPage.goToProfile();
         if(myProfilePage.imgMovieIsDisplayed()){
-            String title = myProfilePage.getTitleMovie();
             String rating = myProfilePage.getUserRatingMovie();
-            moviesPage = myProfilePage.goToAllmovies();
-            movieDetailsPage = moviesPage.searchMovieAndClick(title);
+            movieDetailsPage = myProfilePage.goToAllmovies();
             movieDetailsPage.addRatingAndGoToMyprofile(formatted);
             String newRating = myProfilePage.getUserRatingMovie();
             test.info("old rating:" + rating + "     ||     new rating:" + newRating);
@@ -114,14 +112,14 @@ public class MyProfilePageTest extends Base {
     }
 
 
-    @Test
+    /*@Test
     public void startRatingIsDisplayed() {
         moviesPage = new MoviesPage();
         myProfilePage = moviesPage.goToProfile();
         boolean res = myProfilePage.titleMovieIsDisplayed();
         boolean result = myProfilePage.startRatingIsDisplayed(res);
         Assert.assertTrue(result);
-    }
+    }*/
 
 
 }
