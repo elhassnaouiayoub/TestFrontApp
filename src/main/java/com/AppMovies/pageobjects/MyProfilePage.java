@@ -80,7 +80,7 @@ public class MyProfilePage {
     public boolean movieCardDisplayed() {
         Action.fluentWait(getDriver(), cardImage, 10);
         if(!(Action.isDisplayed(getDriver(), cardImage))){
-            test.warning("user don't have a movie");
+            test.warning("user don't have a movie !!");
             return false;
         }
         else return true;
