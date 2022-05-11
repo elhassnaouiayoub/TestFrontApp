@@ -59,6 +59,7 @@ public class MovieDetailsPage  {
 
     public boolean successElemIsDisplayed() throws Exception {
         Action.JSClick(getDriver(),btnOK);
+        Action.fluentWait(getDriver(),elmSuccess,5);
         return Action.isDisplayed(getDriver(),elmSuccess);
     }
 
@@ -72,7 +73,7 @@ public class MovieDetailsPage  {
     }
 
     public void setEnterRating(float rating){
-        enterRating.sendKeys(Float.toString(rating));
+        Action.type(enterRating, String.valueOf(rating));
     }
 
     public void setEmptyRating(String rating){
@@ -90,6 +91,8 @@ public class MovieDetailsPage  {
     }
 
     public void clickEnterRating() throws Exception {
+        Action.fluentWait(getDriver(),btnRating,4);
+        Action.moveToElement(getDriver(),btnRating);
         Action.JSClick(getDriver(),btnRating);
     }
 
