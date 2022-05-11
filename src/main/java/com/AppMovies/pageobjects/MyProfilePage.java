@@ -79,7 +79,11 @@ public class MyProfilePage {
 
     public boolean movieCardDisplayed() {
         Action.fluentWait(getDriver(), cardImage, 10);
-        return Action.isDisplayed(getDriver(), cardImage);
+        if(!(Action.isDisplayed(getDriver(), cardImage))){
+            test.warning("user don't have a movie !!");
+            return false;
+        }
+        else return true;
     }
 
     public boolean removeMovieFromMyProfile() {
@@ -88,8 +92,9 @@ public class MyProfilePage {
             String title = movieTitle.getText();
             Action.click(getDriver(), removeMovie);
             Action.click(getDriver(), yesDelete);
+            Action.fluentWait(getDriver(), cardMovie, 5);
             getDriver().navigate().refresh();
-            Action.fluentWait(getDriver(), movieTitle, 10);
+            Action.fluentWait(getDriver(), movieTitle, 5);
             if (movieTitle.getText().equalsIgnoreCase(title)) {
                 return false;
             } else
@@ -101,6 +106,7 @@ public class MyProfilePage {
             return true;
         }
         else
+            test.warning("Movie don't exist");
             return true;
     }
 
@@ -125,7 +131,7 @@ public class MyProfilePage {
     public boolean imgMovieIsDisplayed(){
         Action.fluentWait(getDriver(),cardImage,5);
         if(!(Action.isDisplayed(getDriver(),cardImage))){
-            test.info("user don't have a movie");
+            test.warning("user don't have a movie");
             return false;
         }
         else return true;
@@ -133,7 +139,7 @@ public class MyProfilePage {
 
     public boolean titleMovieIsDisplayed(){
         if(!(Action.isDisplayed(getDriver(),movieTitle))){
-            test.info("user don't have a movie");
+            test.warning("user don't have a movie");
             return false;
         }
         else return true;
@@ -141,7 +147,7 @@ public class MyProfilePage {
 
     public boolean userRatingMovieIsDisplayed(){
         if(!(Action.isDisplayed(getDriver(),userRating))){
-            test.info("user don't have a movie");
+            test.warning("user don't have a movie");
             return false;
         }
         else return true;
@@ -170,10 +176,10 @@ public class MyProfilePage {
     }
 
     public boolean startRatingIsDisplayed(boolean res){
-        if(res == false){
+        if(!(res)){
             return Action.isDisplayed(getDriver(),btnStartRating);
         }
-        test.info("User don't have a movie");
+        test.warning("User have a movie");
         return false;
 
     }

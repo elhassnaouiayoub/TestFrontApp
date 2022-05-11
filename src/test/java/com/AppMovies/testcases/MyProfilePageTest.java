@@ -25,9 +25,8 @@ public class MyProfilePageTest extends Base {
 
 
 
-
     @Test
-    public void pageProfileDisplayed() throws Exception {
+    public void pageProfileDisplayed() {
         moviesPage = new MoviesPage();
         myProfilePage = moviesPage.goToProfile();
         String actualResult = myProfilePage.getCurrURL();
@@ -108,7 +107,7 @@ public class MyProfilePageTest extends Base {
             Assert.assertTrue(myProfilePage.updateUserRatingMovie("My rating: "+formatted));
         }
         else {
-            test.info("user don't have movie to update");
+            test.warning("user don't have movie to update");
         }
 
 
