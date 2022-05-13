@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 33, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 262.762 s <<< FAILURE! - in TestSuite
+com.AppMovies.testcases.MyProfilePageTest.removeMovieSuccess  Time elapsed: 11.586 s  <<< FAILURE!
+org.openqa.selenium.json.JsonException: 
+java.lang.reflect.InvocationTargetException
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RAB66FVSG3', ip: '192.168.1.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: driver.version: RemoteWebDriver
+	at com.AppMovies.testcases.MyProfilePageTest.removeMovieSuccess(MyProfilePageTest.java:60)
+Caused by: java.lang.reflect.InvocationTargetException
+	at com.AppMovies.testcases.MyProfilePageTest.removeMovieSuccess(MyProfilePageTest.java:60)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":".swal2\-confirm"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RAB66FVSG3', ip: '192.168.1.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\MRHARN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58958}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1786d10be3bf7a60c3d2c5f5fdb89475
+*** Element info: {Using=class name, value=swal2-confirm}
+	at com.AppMovies.testcases.MyProfilePageTest.removeMovieSuccess(MyProfilePageTest.java:60)
+
+com.AppMovies.testcases.MyProfilePageTest.startRatingIsDisplayed  Time elapsed: 1.179 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at com.AppMovies.testcases.MyProfilePageTest.startRatingIsDisplayed(MyProfilePageTest.java:124)
+
+com.AppMovies.testcases.MyProfilePageTest.updateUserRating  Time elapsed: 16.222 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":".mat\-card\-title"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RAB66FVSG3', ip: '192.168.1.116', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\MRHARN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59100}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 50b63dfdfc1e631e9bb3c63b3fc8706e
+*** Element info: {Using=class name, value=mat-card-title}
+	at com.AppMovies.testcases.MyProfilePageTest.updateUserRating(MyProfilePageTest.java:104)
+
