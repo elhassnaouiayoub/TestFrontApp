@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-All_Test_Suite" class="navigator-link">
+              <span class="suite-name border-failed">All Test Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-All_Test_Suite" class="navigator-link ">
+                    <span>C:\Users\mrharnati\Desktop\AUTOMATION_WORKSPACE\TestFrontApp\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-All_Test_Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-All_Test_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-All_Test_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-All_Test_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-All_Test_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-All_Test_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">33 methods, 3 failed,   30 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods failed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods failed suite-All_Test_Suite"> (show)</a> <!-- show-methods failed suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-All_Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="removeMovieSuccess">removeMovieSuccess</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="startRatingIsDisplayed">startRatingIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="updateUserRating">updateUserRating</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-All_Test_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods passed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods passed suite-All_Test_Suite"> (show)</a> <!-- show-methods passed suite-All_Test_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-All_Test_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.RegisterPageTest" class="method navigator-link" hash-for-method="InvaliedRegister">InvaliedRegister</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.RegisterPageTest" class="method navigator-link" hash-for-method="addUser">addUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MovieDetailsPageTest" class="method navigator-link" hash-for-method="backToAllMovies">backToAllMovies</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="cancelRemoveMovie">cancelRemoveMovie</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MoviesPageTest" class="method navigator-link" hash-for-method="clickOnMovieCard">clickOnMovieCard</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MovieDetailsPageTest" class="method navigator-link" hash-for-method="clickOnRatingBtn">clickOnRatingBtn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.RegisterPageTest" class="method navigator-link" hash-for-method="confirmPassword">confirmPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MovieDetailsPageTest" class="method navigator-link" hash-for-method="descDisplayed">descDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.LoginPageTest" class="method navigator-link" hash-for-method="emptyLogin">emptyLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.RegisterPageTest" class="method navigator-link" hash-for-method="goToLogin">goToLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="goToLoginPage">goToLoginPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MovieDetailsPageTest" class="method navigator-link" hash-for-method="goToMyProfile">goToMyProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MoviesPageTest" class="method navigator-link" hash-for-method="imageCardMovieIsDispalyed">imageCardMovieIsDispalyed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="imageMovieIsDisplayed">imageMovieIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MovieDetailsPageTest" class="method navigator-link" hash-for-method="inputElementEnabled">inputElementEnabled</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.LoginPageTest" class="method navigator-link" hash-for-method="invalidEnter">invalidEnter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="isMovieCardDsiplayed">isMovieCardDsiplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.LoginPageTest" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.LoginPageTest" class="method navigator-link" hash-for-method="loginTextDisplayed">loginTextDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MoviesPageTest" class="method navigator-link" hash-for-method="movieCardIsDisplayed">movieCardIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MoviesPageTest" class="method navigator-link" hash-for-method="officialRatingMovieIsDispalyed">officialRatingMovieIsDispalyed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="pageProfileDisplayed">pageProfileDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MoviesPageTest" class="method navigator-link" hash-for-method="searchAvalaibleMovie">searchAvalaibleMovie</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MoviesPageTest" class="method navigator-link" hash-for-method="searchInvalaibleMovie">searchInvalaibleMovie</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MovieDetailsPageTest" class="method navigator-link" hash-for-method="sendEmptyRatingorInvalid">sendEmptyRatingorInvalid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MovieDetailsPageTest" class="method navigator-link" hash-for-method="sendRatingSucces">sendRatingSucces</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MoviesPageTest" class="method navigator-link" hash-for-method="titleCardMovieIsDispalyed">titleCardMovieIsDispalyed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="titleMovieIsDisplayed">titleMovieIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.LoginPageTest" class="method navigator-link" hash-for-method="toRegister">toRegister</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="com.AppMovies.testcases.MyProfilePageTest" class="method navigator-link" hash-for-method="userRatingIsDisplayed">userRatingIsDisplayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-All_Test_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-All_Test_Suite" class="panel All_Test_Suite">
+          <div class="suite-All_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.AppMovies.testcases.MyProfilePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeMovieSuccess">
+                  </a> <!-- removeMovieSuccess -->
+                  <span class="method-name">removeMovieSuccess</span>
+                  <div class="stack-trace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RAB66FVSG3&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.13&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:608)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at com.AppMovies.actiondriver.Action.click(Action.java:27)
+	at com.AppMovies.pageobjects.MyProfilePage.removeMovieFromMyProfile(MyProfilePage.java:90)
+	at com.AppMovies.testcases.MyProfilePageTest.removeMovieSuccess(MyProfilePageTest.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RAB66FVSG3&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.13&apos;
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 42 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+	... 54 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.swal2\-confirm&quot;}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RAB66FVSG3&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.13&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\MRHARN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58958}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1786d10be3bf7a60c3d2c5f5fdb89475
+*** Element info: {Using=class name, value=swal2-confirm}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	... 58 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="startRatingIsDisplayed">
+                  </a> <!-- startRatingIsDisplayed -->
+                  <span class="method-name">startRatingIsDisplayed</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.AppMovies.testcases.MyProfilePageTest.startRatingIsDisplayed(MyProfilePageTest.java:124)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateUserRating">
+                  </a> <!-- updateUserRating -->
+                  <span class="method-name">updateUserRating</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.mat\-card\-title&quot;}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;RAB66FVSG3&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.13&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\MRHARN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59100}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 50b63dfdfc1e631e9bb3c63b3fc8706e
+*** Element info: {Using=class name, value=mat-card-title}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.AppMovies.pageobjects.MoviesPage.searchMovieAndClick(MoviesPage.java:81)
+	at com.AppMovies.testcases.MyProfilePageTest.updateUserRating(MyProfilePageTest.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-failed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.AppMovies.testcases.LoginPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="emptyLogin">
+                  </a> <!-- emptyLogin -->
+                  <span class="method-name">emptyLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidEnter">
+                  </a> <!-- invalidEnter -->
+                  <span class="method-name">invalidEnter</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTextDisplayed">
+                  </a> <!-- loginTextDisplayed -->
+                  <span class="method-name">loginTextDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="toRegister">
+                  </a> <!-- toRegister -->
+                  <span class="method-name">toRegister</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.AppMovies.testcases.RegisterPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvaliedRegister">
+                  </a> <!-- InvaliedRegister -->
+                  <span class="method-name">InvaliedRegister</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addUser">
+                  </a> <!-- addUser -->
+                  <span class="method-name">addUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="confirmPassword">
+                  </a> <!-- confirmPassword -->
+                  <span class="method-name">confirmPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="goToLogin">
+                  </a> <!-- goToLogin -->
+                  <span class="method-name">goToLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.AppMovies.testcases.MovieDetailsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="backToAllMovies">
+                  </a> <!-- backToAllMovies -->
+                  <span class="method-name">backToAllMovies</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnRatingBtn">
+                  </a> <!-- clickOnRatingBtn -->
+                  <span class="method-name">clickOnRatingBtn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="descDisplayed">
+                  </a> <!-- descDisplayed -->
+                  <span class="method-name">descDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="goToMyProfile">
+                  </a> <!-- goToMyProfile -->
+                  <span class="method-name">goToMyProfile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="inputElementEnabled">
+                  </a> <!-- inputElementEnabled -->
+                  <span class="method-name">inputElementEnabled</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sendEmptyRatingorInvalid">
+                  </a> <!-- sendEmptyRatingorInvalid -->
+                  <span class="method-name">sendEmptyRatingorInvalid</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sendRatingSucces">
+                  </a> <!-- sendRatingSucces -->
+                  <span class="method-name">sendRatingSucces</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.AppMovies.testcases.MoviesPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnMovieCard">
+                  </a> <!-- clickOnMovieCard -->
+                  <span class="method-name">clickOnMovieCard</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="imageCardMovieIsDispalyed">
+                  </a> <!-- imageCardMovieIsDispalyed -->
+                  <span class="method-name">imageCardMovieIsDispalyed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="movieCardIsDisplayed">
+                  </a> <!-- movieCardIsDisplayed -->
+                  <span class="method-name">movieCardIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="officialRatingMovieIsDispalyed">
+                  </a> <!-- officialRatingMovieIsDispalyed -->
+                  <span class="method-name">officialRatingMovieIsDispalyed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchAvalaibleMovie">
+                  </a> <!-- searchAvalaibleMovie -->
+                  <span class="method-name">searchAvalaibleMovie</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchInvalaibleMovie">
+                  </a> <!-- searchInvalaibleMovie -->
+                  <span class="method-name">searchInvalaibleMovie</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="titleCardMovieIsDispalyed">
+                  </a> <!-- titleCardMovieIsDispalyed -->
+                  <span class="method-name">titleCardMovieIsDispalyed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.AppMovies.testcases.MyProfilePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="cancelRemoveMovie">
+                  </a> <!-- cancelRemoveMovie -->
+                  <span class="method-name">cancelRemoveMovie</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="goToLoginPage">
+                  </a> <!-- goToLoginPage -->
+                  <span class="method-name">goToLoginPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="imageMovieIsDisplayed">
+                  </a> <!-- imageMovieIsDisplayed -->
+                  <span class="method-name">imageMovieIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isMovieCardDsiplayed">
+                  </a> <!-- isMovieCardDsiplayed -->
+                  <span class="method-name">isMovieCardDsiplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pageProfileDisplayed">
+                  </a> <!-- pageProfileDisplayed -->
+                  <span class="method-name">pageProfileDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="titleMovieIsDisplayed">
+                  </a> <!-- titleMovieIsDisplayed -->
+                  <span class="method-name">titleMovieIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userRatingIsDisplayed">
+                  </a> <!-- userRatingIsDisplayed -->
+                  <span class="method-name">userRatingIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+        </div> <!-- panel All_Test_Suite -->
+        <div panel-name="test-xml-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\mrharnati\Desktop\AUTOMATION_WORKSPACE\TestFrontApp\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;All Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.AppMovies.utility.ListenerClass&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;All Test Cases&quot; verbose=&quot;2&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.AppMovies.testcases.LoginPageTest&quot;/&gt;
+      &lt;class name=&quot;com.AppMovies.testcases.RegisterPageTest&quot;/&gt;
+      &lt;class name=&quot;com.AppMovies.testcases.MoviesPageTest&quot;/&gt;
+      &lt;class name=&quot;com.AppMovies.testcases.MovieDetailsPageTest&quot;/&gt;
+      &lt;class name=&quot;com.AppMovies.testcases.MyProfilePageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- All Test Cases --&gt;
+&lt;/suite&gt; &lt;!-- All Test Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for All Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">All Test Cases (5 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for All Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for All Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_All_Test_Suite');
+function tableData_All_Test_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(33);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'updateUserRating')
+data.setCell(0, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(0, 3, 16073);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'searchInvalaibleMovie')
+data.setCell(1, 2, 'com.AppMovies.testcases.MoviesPageTest')
+data.setCell(1, 3, 11525);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'removeMovieSuccess')
+data.setCell(2, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(2, 3, 11164);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'imageCardMovieIsDispalyed')
+data.setCell(3, 2, 'com.AppMovies.testcases.MoviesPageTest')
+data.setCell(3, 3, 3619);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'imageMovieIsDisplayed')
+data.setCell(4, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(4, 3, 3186);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'isMovieCardDsiplayed')
+data.setCell(5, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(5, 3, 3184);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'InvaliedRegister')
+data.setCell(6, 2, 'com.AppMovies.testcases.RegisterPageTest')
+data.setCell(6, 3, 3125);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'addUser')
+data.setCell(7, 2, 'com.AppMovies.testcases.RegisterPageTest')
+data.setCell(7, 3, 3095);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'confirmPassword')
+data.setCell(8, 2, 'com.AppMovies.testcases.RegisterPageTest')
+data.setCell(8, 3, 3014);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'cancelRemoveMovie')
+data.setCell(9, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(9, 3, 2454);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'searchAvalaibleMovie')
+data.setCell(10, 2, 'com.AppMovies.testcases.MoviesPageTest')
+data.setCell(10, 3, 1830);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'sendEmptyRatingorInvalid')
+data.setCell(11, 2, 'com.AppMovies.testcases.MovieDetailsPageTest')
+data.setCell(11, 3, 1825);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'goToMyProfile')
+data.setCell(12, 2, 'com.AppMovies.testcases.MovieDetailsPageTest')
+data.setCell(12, 3, 1773);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'backToAllMovies')
+data.setCell(13, 2, 'com.AppMovies.testcases.MovieDetailsPageTest')
+data.setCell(13, 3, 1768);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'clickOnRatingBtn')
+data.setCell(14, 2, 'com.AppMovies.testcases.MovieDetailsPageTest')
+data.setCell(14, 3, 1683);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'sendRatingSucces')
+data.setCell(15, 2, 'com.AppMovies.testcases.MovieDetailsPageTest')
+data.setCell(15, 3, 1605);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'login')
+data.setCell(16, 2, 'com.AppMovies.testcases.LoginPageTest')
+data.setCell(16, 3, 1542);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'inputElementEnabled')
+data.setCell(17, 2, 'com.AppMovies.testcases.MovieDetailsPageTest')
+data.setCell(17, 3, 1410);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'invalidEnter')
+data.setCell(18, 2, 'com.AppMovies.testcases.LoginPageTest')
+data.setCell(18, 3, 1403);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'clickOnMovieCard')
+data.setCell(19, 2, 'com.AppMovies.testcases.MoviesPageTest')
+data.setCell(19, 3, 1341);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'officialRatingMovieIsDispalyed')
+data.setCell(20, 2, 'com.AppMovies.testcases.MoviesPageTest')
+data.setCell(20, 3, 1316);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'titleCardMovieIsDispalyed')
+data.setCell(21, 2, 'com.AppMovies.testcases.MoviesPageTest')
+data.setCell(21, 3, 1292);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'movieCardIsDisplayed')
+data.setCell(22, 2, 'com.AppMovies.testcases.MoviesPageTest')
+data.setCell(22, 3, 1283);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'descDisplayed')
+data.setCell(23, 2, 'com.AppMovies.testcases.MovieDetailsPageTest')
+data.setCell(23, 3, 1268);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'userRatingIsDisplayed')
+data.setCell(24, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(24, 3, 999);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'titleMovieIsDisplayed')
+data.setCell(25, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(25, 3, 995);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'startRatingIsDisplayed')
+data.setCell(26, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(26, 3, 950);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'goToLogin')
+data.setCell(27, 2, 'com.AppMovies.testcases.RegisterPageTest')
+data.setCell(27, 3, 632);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'toRegister')
+data.setCell(28, 2, 'com.AppMovies.testcases.LoginPageTest')
+data.setCell(28, 3, 454);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'goToLoginPage')
+data.setCell(29, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(29, 3, 436);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'emptyLogin')
+data.setCell(30, 2, 'com.AppMovies.testcases.LoginPageTest')
+data.setCell(30, 3, 316);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'pageProfileDisplayed')
+data.setCell(31, 2, 'com.AppMovies.testcases.MyProfilePageTest')
+data.setCell(31, 3, 273);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'loginTextDisplayed')
+data.setCell(32, 2, 'com.AppMovies.testcases.LoginPageTest')
+data.setCell(32, 3, 193);
+window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-All_Test_Suite">
+              </div> <!-- times-div-All_Test_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for All Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">8 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.AppMovies.testcases.RegisterPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">loadConfig</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.AppMovies.testcases.MovieDetailsPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+                <span class="ignored-method-name">loadConfig</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.AppMovies.testcases.MoviesPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loadConfig</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.AppMovies.testcases.MyProfilePageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loadConfig</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-All_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.AppMovies.testcases.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">loadConfig</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.LoginPageTest.emptyLogin(), Chrome)</span>
+                <span class="method-start">138 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">emptyLogin</span>
+                <span class="method-start">3532 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">4369 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.LoginPageTest.invalidEnter() throws java.lang.InterruptedExcepti...)</span>
+                <span class="method-start">5272 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">invalidEnter</span>
+                <span class="method-start">8147 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">9882 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.LoginPageTest.login() throws java.lang.InterruptedException, Chr...)</span>
+                <span class="method-start">10781 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login</span>
+                <span class="method-start">13528 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">15222 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.LoginPageTest.loginTextDisplayed(), Chrome)</span>
+                <span class="method-start">16114 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginTextDisplayed</span>
+                <span class="method-start">18925 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">19396 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.LoginPageTest.toRegister(), Chrome)</span>
+                <span class="method-start">20177 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">toRegister</span>
+                <span class="method-start">23102 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">23833 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.AppMovies.testcases.RegisterPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.RegisterPageTest.InvaliedRegister() throws java.lang.Interrupted...)</span>
+                <span class="method-start">24608 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">InvaliedRegister</span>
+                <span class="method-start">27519 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">31277 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.RegisterPageTest.addUser() throws java.lang.InterruptedException...)</span>
+                <span class="method-start">32266 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">addUser</span>
+                <span class="method-start">35291 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">38983 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.RegisterPageTest.confirmPassword() throws java.lang.InterruptedE...)</span>
+                <span class="method-start">40087 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">confirmPassword</span>
+                <span class="method-start">42946 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">46650 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.RegisterPageTest.goToLogin(), Chrome)</span>
+                <span class="method-start">47718 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">goToLogin</span>
+                <span class="method-start">50527 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">51436 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.AppMovies.testcases.MoviesPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MoviesPageTest.clickOnMovieCard(), Chrome)</span>
+                <span class="method-start">52391 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">55346 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">clickOnMovieCard</span>
+                <span class="method-start">56829 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">58570 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MoviesPageTest.imageCardMovieIsDispalyed(), Chrome)</span>
+                <span class="method-start">59480 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">62520 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">imageCardMovieIsDispalyed</span>
+                <span class="method-start">63940 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">68176 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MoviesPageTest.movieCardIsDisplayed(), Chrome)</span>
+                <span class="method-start">69147 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">71909 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">movieCardIsDisplayed</span>
+                <span class="method-start">73411 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">74951 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MoviesPageTest.officialRatingMovieIsDispalyed(), Chrome)</span>
+                <span class="method-start">75929 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">78481 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">officialRatingMovieIsDispalyed</span>
+                <span class="method-start">79962 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">81690 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MoviesPageTest.searchAvalaibleMovie(), Chrome)</span>
+                <span class="method-start">82673 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">85607 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchAvalaibleMovie</span>
+                <span class="method-start">87026 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">89147 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MoviesPageTest.searchInvalaibleMovie() throws java.lang.Interrup...)</span>
+                <span class="method-start">90080 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">93046 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchInvalaibleMovie</span>
+                <span class="method-start">94495 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">106298 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MoviesPageTest.titleCardMovieIsDispalyed(), Chrome)</span>
+                <span class="method-start">107252 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">110103 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">titleCardMovieIsDispalyed</span>
+                <span class="method-start">111686 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">113259 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.AppMovies.testcases.MovieDetailsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MovieDetailsPageTest.backToAllMovies(), Chrome)</span>
+                <span class="method-start">114098 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">116857 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">backToAllMovies</span>
+                <span class="method-start">118374 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">120360 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MovieDetailsPageTest.clickOnRatingBtn() throws java.lang.Excepti...)</span>
+                <span class="method-start">121335 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">124209 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">clickOnRatingBtn</span>
+                <span class="method-start">125597 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">128496 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MovieDetailsPageTest.descDisplayed(), Chrome)</span>
+                <span class="method-start">129538 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">132635 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">descDisplayed</span>
+                <span class="method-start">133992 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">135906 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MovieDetailsPageTest.goToMyProfile(), Chrome)</span>
+                <span class="method-start">136841 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">139944 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">goToMyProfile</span>
+                <span class="method-start">141425 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">143455 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MovieDetailsPageTest.inputElementEnabled() throws java.lang.Exce...)</span>
+                <span class="method-start">144392 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">147178 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">inputElementEnabled</span>
+                <span class="method-start">148563 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">150966 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MovieDetailsPageTest.sendEmptyRatingorInvalid() throws java.lang...)</span>
+                <span class="method-start">151905 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">154837 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">sendEmptyRatingorInvalid</span>
+                <span class="method-start">156172 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">158444 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MovieDetailsPageTest.sendRatingSucces() throws java.lang.Excepti...)</span>
+                <span class="method-start">159352 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">162225 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">sendRatingSucces</span>
+                <span class="method-start">163739 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">166079 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.AppMovies.testcases.MyProfilePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.cancelRemoveMovie(), Chrome)</span>
+                <span class="method-start">166917 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">169712 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">cancelRemoveMovie</span>
+                <span class="method-start">171112 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">174151 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.goToLoginPage(), Chrome)</span>
+                <span class="method-start">175035 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">177900 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">goToLoginPage</span>
+                <span class="method-start">179412 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">180107 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.imageMovieIsDisplayed(), Chrome)</span>
+                <span class="method-start">181009 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">183880 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">imageMovieIsDisplayed</span>
+                <span class="method-start">185293 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">188830 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.isMovieCardDsiplayed(), Chrome)</span>
+                <span class="method-start">189673 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">192439 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">isMovieCardDsiplayed</span>
+                <span class="method-start">193743 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">197369 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.pageProfileDisplayed() throws java.lang.Except...)</span>
+                <span class="method-start">198222 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">201109 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">pageProfileDisplayed</span>
+                <span class="method-start">202456 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">202959 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.removeMovieSuccess(), Chrome)</span>
+                <span class="method-start">203750 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">206567 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">removeMovieSuccess</span>
+                <span class="method-start">207976 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">219561 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.startRatingIsDisplayed(), Chrome)</span>
+                <span class="method-start">220439 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">223313 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">startRatingIsDisplayed</span>
+                <span class="method-start">224684 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">225864 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.titleMovieIsDisplayed(), Chrome)</span>
+                <span class="method-start">226716 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">229385 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">titleMovieIsDisplayed</span>
+                <span class="method-start">230767 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">232081 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.updateUserRating() throws java.lang.Exception,...)</span>
+                <span class="method-start">232919 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">235805 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">updateUserRating</span>
+                <span class="method-start">237266 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">253488 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(public void com.AppMovies.testcases.MyProfilePageTest.userRatingIsDisplayed(), Chrome)</span>
+                <span class="method-start">254420 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">257384 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">userRatingIsDisplayed</span>
+                <span class="method-start">258699 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">259869 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.AppMovies.testcases.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">260831 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
