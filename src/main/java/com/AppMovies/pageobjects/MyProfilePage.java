@@ -1,16 +1,15 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
-import com.AppMovies.utility.Log;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-import static com.AppMovies.base.Base.getDriver;
 import static com.AppMovies.utility.ExtentManager.test;
 
-public class MyProfilePage {
+
+public class MyProfilePage extends Action {
 
     @FindBy(id = "deconnecter")
     WebElement btnDeconnecter;
@@ -63,46 +62,45 @@ public class MyProfilePage {
     @FindBy(id = "btnStartRating")
     WebElement btnStartRating;
 
-    public MyProfilePage() {
-        PageFactory.initElements(getDriver(), this);
+    public MyProfilePage(WebDriver driver) {
+        super(driver);
     }
 
 
-    public LoginPage clickOnBtnDeconnecter() {
+    public void clickOnBtnDeconnecter() {
         btnDeconnecter.click();
-        return new LoginPage();
     }
 
     public String getCurrURL() {
-        return Action.getCurrentURL(getDriver());
+        return Action.getCurrentURL(driver);
     }
 
     public boolean movieCardDisplayed() {
-        Action.fluentWait(getDriver(), cardImage, 10);
-        if(!(Action.isDisplayed(getDriver(), cardImage))){
-            test.warning("user don't have a movie !!");
+        Action.fluentWait(driver, cardImage, 10);
+        if(!(Action.isDisplayed(driver, cardImage))){
+            test.warning("user doesn't have a movie !!");
             return false;
         }
         else return true;
     }
 
     public boolean removeMovieFromMyProfile() {
-        int size = getDriver().findElements(By.className("mat-card-title")).size();
+        int size = driver.findElements(By.className("mat-card-title")).size();
         if(size>1) {
             String title = movieTitle.getText();
-            Action.click(getDriver(), removeMovie);
-            Action.click(getDriver(), yesDelete);
-            Action.fluentWait(getDriver(), cardMovie, 5);
-            getDriver().navigate().refresh();
-            Action.fluentWait(getDriver(), movieTitle, 5);
+            Action.click(driver, removeMovie);
+            Action.click(driver, yesDelete);
+            Action.fluentWait(driver, cardMovie, 5);
+            driver.navigate().refresh();
+            Action.fluentWait(driver, movieTitle, 5);
             if (movieTitle.getText().equalsIgnoreCase(title)) {
                 return false;
             } else
                 return true;
         }
         else if (size == 1){
-            Action.click(getDriver(), removeMovie);
-            Action.click(getDriver(), yesDelete);
+            Action.click(driver, removeMovie);
+            Action.click(driver, yesDelete);
             return true;
         }
         else
@@ -112,12 +110,12 @@ public class MyProfilePage {
 
 
     public boolean cancelRemoveMovieFromMyProfile() {
-        int size = getDriver().findElements(By.className("mat-card-title")).size();
+        int size = driver.findElements(By.className("mat-card-title")).size();
         if(size>=1) {
             String title = movieTitle.getText();
-            Action.click(getDriver(), removeMovie);
-            Action.click(getDriver(), cancelDelete);
-            getDriver().navigate().refresh();
+            Action.click(driver, removeMovie);
+            Action.click(driver, cancelDelete);
+            driver.navigate().refresh();
             if (movieTitle.getText().equalsIgnoreCase(title)) {
                 return true;
             } else
@@ -129,45 +127,41 @@ public class MyProfilePage {
     }
 
     public boolean imgMovieIsDisplayed(){
-        Action.fluentWait(getDriver(),cardImage,5);
-        if(!(Action.isDisplayed(getDriver(),cardImage))){
-            test.warning("user don't have a movie");
+        Action.fluentWait(driver,cardImage,5);
+        if(!(Action.isDisplayed(driver,cardImage))){
+            test.warning("user doesn't have a movie");
             return false;
         }
         else return true;
     }
 
     public boolean titleMovieIsDisplayed(){
-        if(!(Action.isDisplayed(getDriver(),movieTitle))){
-            test.warning("user don't have a movie");
+        if(!(Action.isDisplayed(driver,movieTitle))){
+            test.warning("user doesn't have a movie");
             return false;
         }
         else return true;
     }
 
     public boolean userRatingMovieIsDisplayed(){
-        if(!(Action.isDisplayed(getDriver(),userRating))){
-            test.warning("user don't have a movie");
+        if(!(Action.isDisplayed(driver,userRating))){
+            test.warning("user doesn't have a movie");
             return false;
         }
         else return true;
     }
 
-    public String getTitleMovie(){
-        return movieTitle.getText();
-    }
 
     public String getUserRatingMovie(){
         return userRating.getText();
     }
 
-    public MovieDetailsPage goToAllmovies(){
-        Action.click(getDriver(),movieTitle);
-        return new MovieDetailsPage();
+    public void goToAllmovies(){
+        Action.click(driver,movieTitle);
     }
 
     public boolean updateUserRatingMovie(String rating)  {
-        Action.fluentWait(getDriver(),userRating,5);
+        Action.fluentWait(driver,userRating,5);
         if((userRating.getText()).equalsIgnoreCase(rating)){
             return true;
         }
@@ -177,10 +171,10 @@ public class MyProfilePage {
 
     public boolean startRatingIsDisplayed(boolean res){
         if(!(res)){
-            return Action.isDisplayed(getDriver(),btnStartRating);
+            return Action.isDisplayed(driver,btnStartRating);
         }
         test.warning("User have a movie");
-        return false;
+        return true;
 
     }
 

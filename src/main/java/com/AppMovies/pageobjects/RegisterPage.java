@@ -1,14 +1,17 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
-import com.AppMovies.base.Base;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.AppMovies.base.Base.getDriver;
+import java.util.concurrent.TimeUnit;
 
-public class RegisterPage {
+
+public class RegisterPage extends Action {
 
     @FindBy (id = "username")
     WebElement userName;
@@ -31,26 +34,33 @@ public class RegisterPage {
     @FindBy(id = "createaccount")
     WebElement registerText;
 
-    public RegisterPage(){
-        PageFactory.initElements(getDriver(),this);
+    public RegisterPage(WebDriver driver){
+        super(driver);
     }
 
     public boolean registerTextIsDisplayed(){
-        return Action.isDisplayed(getDriver(),registerText);
+        return Action.isDisplayed(driver,registerText);
     }
 
-    public LoginPage register(String uname, String mail, String pass, String confirmPass) throws InterruptedException {
+    public void register(String uname, String mail, String pass, String confirmPass) {
         Action.type(userName,uname);
         Action.type(email,mail);
         Action.type(password,pass);
         Action.type(confirmPassword,confirmPass);
-        Action.click(getDriver(),signup);
-        Thread.sleep(1000);
-        return new LoginPage();
     }
 
-    public LoginPage goToLogin(){
-        Action.click(getDriver(),gotoLogin);
-        return new LoginPage();
+    public void clickOnSignup() throws InterruptedException {
+        Action.click(driver,signup);
+        Thread.sleep(100);
     }
+
+    public void verifyMessageAlert(){
+        driver.switchTo().alert().accept();
+        //return driver.switchTo().alert().getText();
+    }
+
+    public void goToLogin(){
+        Action.click(driver,gotoLogin);
+    }
+
 }

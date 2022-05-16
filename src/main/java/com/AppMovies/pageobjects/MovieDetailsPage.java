@@ -1,13 +1,12 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-import static com.AppMovies.base.Base.getDriver;
 
-public class MovieDetailsPage  {
+public class MovieDetailsPage extends Action {
 
     @FindBy(id = "btnRateMovie")
     WebElement btnRating;
@@ -39,37 +38,35 @@ public class MovieDetailsPage  {
     @FindBy(xpath = "//button[text()='Close']")
     WebElement closeBtn;
 
-    public MovieDetailsPage(){
-        PageFactory.initElements(getDriver(),this);
+    public MovieDetailsPage(WebDriver driver) {
+        super(driver);
     }
 
     public boolean descIsDisplayed(){
-        return Action.isDisplayed(getDriver(),desciprtion);
+        return Action.isDisplayed(driver,desciprtion);
     }
 
-    public MyProfilePage clickMyProfile(){
-        Action.click(getDriver(),btnMyProfile);
-        return new MyProfilePage();
+    public void clickMyProfile(){
+        Action.click(driver,btnMyProfile);
     }
 
-    public MoviesPage goToAllMovies(){
-        Action.click(getDriver(),allMovies);
-        return new MoviesPage();
+    public void goToAllMovies(){
+        Action.click(driver,allMovies);
     }
 
     public boolean successElemIsDisplayed() throws Exception {
-        Action.JSClick(getDriver(),btnOK);
-        Action.fluentWait(getDriver(),elmSuccess,5);
-        return Action.isDisplayed(getDriver(),elmSuccess);
+        Action.JSClick(driver,btnOK);
+        Action.fluentWait(driver,elmSuccess,5);
+        return Action.isDisplayed(driver,elmSuccess);
     }
 
     public boolean errorElemIsDisplayed() throws Exception {
-        Action.JSClick(getDriver(),btnOK);
-        return Action.isDisplayed(getDriver(),elmError);
+        Action.JSClick(driver,btnOK);
+        return Action.isDisplayed(driver,elmError);
     }
 
     public boolean inputRatingElementEnabled(){
-        return Action.isEnabled(getDriver(),enterRating);
+        return Action.isEnabled(driver,enterRating);
     }
 
     public void setEnterRating(float rating){
@@ -82,29 +79,27 @@ public class MovieDetailsPage  {
 
 
     public boolean titleDisplayed(){
-        return Action.isDisplayed(getDriver(),titleBtnRating);
+        return Action.isDisplayed(driver,titleBtnRating);
     }
 
 
     public String getCurrURL(){
-        return Action.getCurrentURL(getDriver());
+        return Action.getCurrentURL(driver);
     }
 
     public void clickEnterRating() throws Exception {
-        Action.fluentWait(getDriver(),btnRating,4);
-        Action.moveToElement(getDriver(),btnRating);
-        Action.JSClick(getDriver(),btnRating);
+        Action.fluentWait(driver,btnRating,4);
+        Action.moveToElement(driver,btnRating);
+        Action.JSClick(driver,btnRating);
     }
 
-    public MyProfilePage addRatingAndGoToMyprofile(String rating) throws Exception {
-        Action.fluentWait(getDriver(),btnRating,5);
-        Action.JSClick(getDriver(),btnRating);
+    public void addRatingAndGoToMyprofile(String rating) throws Exception {
+        Action.fluentWait(driver,btnRating,5);
+        Action.JSClick(driver,btnRating);
         Action.type(enterRating,rating);
-        Action.JSClick(getDriver(),btnOK);
-        Action.JSClick(getDriver(),closeBtn);
-        Action.fluentWait(getDriver(),btnMyProfile,5);
-        Action.JSClick(getDriver(),btnMyProfile);
-        return new MyProfilePage();
-
+        Action.JSClick(driver,btnOK);
+        Action.JSClick(driver,closeBtn);
+        Action.fluentWait(driver,btnMyProfile,5);
+        Action.JSClick(driver,btnMyProfile);
     }
 }

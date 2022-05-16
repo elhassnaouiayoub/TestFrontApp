@@ -1,6 +1,7 @@
 package com.AppMovies.base;
 
 import com.AppMovies.actiondriver.MyScreenRecorder;
+import com.AppMovies.automationApplication.MoviesApplication;
 import com.AppMovies.pageobjects.*;
 import com.AppMovies.utility.ExtentManager;
 import org.apache.log4j.xml.DOMConfigurator;
@@ -14,16 +15,14 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Properties;
 
-public class Base {
+public class Base{
+
 
     public static Properties prop;
-    public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
+    public static WebDriver driver;
     protected Factory factory = new Factory();
-    protected LoginPage loginPage;
-    protected MoviesPage moviesPage;
-    protected RegisterPage registerPage;
-    protected MovieDetailsPage movieDetailsPage;
-    protected MyProfilePage myProfilePage;
+
+    public static MoviesApplication moviesApplication;
 
 
     @BeforeSuite
@@ -44,9 +43,11 @@ public class Base {
         }
     }
 
+/*
     public static WebDriver getDriver(){
         return driver.get();
     }
+*/
 
     @Parameters("browser")
     @BeforeMethod
@@ -57,7 +58,7 @@ public class Base {
 
     @AfterMethod
     public void teardown() throws Exception {
-        getDriver().quit();
+        driver.quit();
         MyScreenRecorder.stopRecording();
     }
 

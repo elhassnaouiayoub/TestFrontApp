@@ -1,13 +1,14 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.AppMovies.base.Base.getDriver;
 
-public class LoginPage   {
+public class LoginPage extends Action {
     @FindBy(id = "username")
     WebElement userName;
 
@@ -24,34 +25,31 @@ public class LoginPage   {
     WebElement loginText;
 
 
-    public LoginPage() {
-        PageFactory.initElements(getDriver(), this);
+    public LoginPage(WebDriver driver) {
+        super(driver);
     }
 
     public void Empty() {
-        Action.click(getDriver(),login);
+        Action.click(driver,login);
     }
 
     public boolean logintextIsDisplayed(){
-        return Action.isDisplayed(getDriver(),loginText);
+        return Action.isDisplayed(driver,loginText);
     }
 
-    public MoviesPage login(String uname, String pass) throws InterruptedException {
+    public void login(String uname, String pass) throws InterruptedException {
         Action.type(userName, uname);
         Action.type(password, pass);
-        Action.click(getDriver(), login);
-        Thread.sleep(500);
-        return new MoviesPage();
+        Action.click(driver, login);
+        Thread.sleep(100);
     }
-
 
     public String getCurrURL(){
-        return Action.getCurrentURL(getDriver());
+        return Action.getCurrentURL(driver);
     }
 
-    public RegisterPage goToRegister(){
-        Action.click(getDriver(),toRegister);
-        return new RegisterPage();
+    public void goToRegister(){
+        Action.click(driver,toRegister);
     }
 
 

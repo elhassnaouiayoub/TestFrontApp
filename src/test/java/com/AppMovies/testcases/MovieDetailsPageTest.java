@@ -1,7 +1,7 @@
 package com.AppMovies.testcases;
 
+import com.AppMovies.automationApplication.MoviesApplication;
 import com.AppMovies.base.Base;
-import com.AppMovies.pageobjects.MoviesPage;
 import com.AppMovies.utility.Log;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
@@ -31,70 +31,67 @@ public class MovieDetailsPageTest extends Base {
 
     @Test
     public void descDisplayed() {
-        moviesPage = new MoviesPage();
-        movieDetailsPage = moviesPage.clickMovieCard();
-        boolean result = movieDetailsPage.descIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.clickMovieCard();
+        boolean result = moviesApplication.movieDetailsPage.descIsDisplayed();
         Assert.assertTrue(result);
     }
 
 
     @Test
     public void clickOnRatingBtn() throws Exception {
-        moviesPage = new MoviesPage();
-        movieDetailsPage = moviesPage.clickMovieCard();
-        movieDetailsPage.clickEnterRating();
-        boolean result = movieDetailsPage.titleDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.clickMovieCard();
+        moviesApplication.movieDetailsPage.clickEnterRating();
+        boolean result = moviesApplication.movieDetailsPage.titleDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void inputElementEnabled() throws Exception {
-        moviesPage = new MoviesPage();
-        movieDetailsPage = moviesPage.clickMovieCard();
-        movieDetailsPage.clickEnterRating();
-        boolean result = movieDetailsPage.inputRatingElementEnabled();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.clickMovieCard();
+        moviesApplication.movieDetailsPage.clickEnterRating();
+        boolean result = moviesApplication.movieDetailsPage.inputRatingElementEnabled();
         Assert.assertTrue(result);
     }
 
     @Test
     public void sendRatingSucces() throws Exception {
-        moviesPage = new MoviesPage();
-        movieDetailsPage = moviesPage.clickMovieCard();
-        movieDetailsPage.clickEnterRating();
-        movieDetailsPage.setEnterRating(Float.parseFloat(formatted));
-        boolean result = movieDetailsPage.successElemIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.clickMovieCard();
+        moviesApplication.movieDetailsPage.clickEnterRating();
+        moviesApplication.movieDetailsPage.setEnterRating(Float.parseFloat(formatted));
+        boolean result = moviesApplication.movieDetailsPage.successElemIsDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void sendEmptyRatingorInvalid() throws Exception {
-        moviesPage = new MoviesPage();
-        movieDetailsPage = moviesPage.clickMovieCard();
-        movieDetailsPage.clickEnterRating();
-        movieDetailsPage.setEmptyRating(falseRating);
-        boolean result = movieDetailsPage.errorElemIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.clickMovieCard();
+        moviesApplication.movieDetailsPage.clickEnterRating();
+        moviesApplication.movieDetailsPage.setEmptyRating(falseRating);
+        boolean result = moviesApplication.movieDetailsPage.errorElemIsDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void backToAllMovies(){
-        moviesPage = new MoviesPage();
-        movieDetailsPage = moviesPage.clickMovieCard();
-        moviesPage = movieDetailsPage.goToAllMovies();
-        String actualURL = moviesPage.getCurrURL();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.clickMovieCard();
+        moviesApplication.movieDetailsPage.goToAllMovies();
+        String actualURL = moviesApplication.moviesPage.getCurrURL();
         String expectedURL = "http://localhost:4200/movies";
         Assert.assertEquals(actualURL,expectedURL);
     }
 
     @Test
     public void goToMyProfile(){
-        Log.startTestCase("goToMyProfile");
-        moviesPage = new MoviesPage();
-        Log.info("Login Success");
-        movieDetailsPage = moviesPage.clickMovieCard();
-        Log.info("Go to movie's details");
-        myProfilePage = movieDetailsPage.clickMyProfile();
-        String actualURL = myProfilePage.getCurrURL();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.clickMovieCard();
+        moviesApplication.movieDetailsPage.clickMyProfile();
+        String actualURL = moviesApplication.myProfilePage.getCurrURL();
         String expectedURL = "http://localhost:4200/myprofile";
         Assert.assertEquals(actualURL,expectedURL);
     }

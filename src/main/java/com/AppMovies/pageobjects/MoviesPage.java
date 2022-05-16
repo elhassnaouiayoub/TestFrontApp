@@ -1,13 +1,14 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.AppMovies.base.Base.getDriver;
 
-public class MoviesPage {
+public class MoviesPage extends Action {
     @FindBy(id = "movies")
     WebElement btnMovies;
 
@@ -35,13 +36,13 @@ public class MoviesPage {
     @FindBy(className = "rating-text")
     WebElement officialRating;
 
-    public MoviesPage(){
-        PageFactory.initElements(getDriver(),this);
+    public MoviesPage(WebDriver driver){
+        super(driver);
     }
 
 
     public String getCurrURL(){
-        return Action.getCurrentURL(getDriver());
+        return Action.getCurrentURL(driver);
     }
 
     public String getMovieTitle(){
@@ -49,53 +50,50 @@ public class MoviesPage {
     }
 
 
-    public MovieDetailsPage clickMovieCard(){
-        Action.click(getDriver(),cardMovie);
-        return new MovieDetailsPage();
+    public void clickMovieCard(){
+        Action.click(driver,cardMovie);
     }
 
     public boolean btnIsDisplayed(){
-        return Action.isDisplayed(getDriver(),btnMovies);
+        return Action.isDisplayed(driver,btnMovies);
     }
 
-    public MyProfilePage goToProfile() {
-        Action.click(getDriver(),btnMyProfile);
-        return new MyProfilePage();
+    public void goToProfile() {
+        Action.click(driver,btnMyProfile);
     }
 
     public boolean movieCardDisplayed(){
-        return Action.isDisplayed(getDriver(),moviecard);
+        return Action.isDisplayed(driver,moviecard);
     }
 
     public boolean searchMovie(String movieName) {
-        Action.fluentWait(getDriver(),moviecard,10);
+        Action.fluentWait(driver,moviecard,10);
         inputSearch.sendKeys(movieName);
-        Action.click(getDriver(),btnSearch);
-        return Action.isDisplayed(getDriver(),moviecard);
+        Action.click(driver,btnSearch);
+        return Action.isDisplayed(driver,moviecard);
     }
 
-    public MovieDetailsPage searchMovieAndClick(String title) throws Exception {
-        Action.fluentWait(getDriver(),moviecard,10);
+    public void searchMovieAndClick(String title) throws Exception {
+        Action.fluentWait(driver,moviecard,10);
         Action.type(inputSearch,title);
-        Action.click(getDriver(),btnSearch);
+        Action.click(driver,btnSearch);
         if(movieTitle.getText().equalsIgnoreCase(title)){
-            Action.fluentWait(getDriver(),moviecard,10);
-            Action.click(getDriver(),moviecard);
+            Action.fluentWait(driver,moviecard,10);
+            Action.click(driver,moviecard);
         }
-        return new MovieDetailsPage();
     }
 
     public boolean imgMovieIsDisplayed(){
-        Action.fluentWait(getDriver(),cardImage,10);
-        return Action.isDisplayed(getDriver(),cardImage);
+        Action.fluentWait(driver,cardImage,10);
+        return Action.isDisplayed(driver,cardImage);
     }
 
     public boolean titleMovieIsDisplayed(){
-        return Action.isDisplayed(getDriver(),movieTitle);
+        return Action.isDisplayed(driver,movieTitle);
     }
 
     public boolean officialRatingMovieIsDisplayed(){
-        return Action.isDisplayed(getDriver(),officialRating);
+        return Action.isDisplayed(driver,officialRating);
     }
 
 }
