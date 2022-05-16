@@ -1,7 +1,7 @@
 package com.AppMovies.testcases;
 
+import com.AppMovies.automationApplication.MoviesApplication;
 import com.AppMovies.base.Base;
-import com.AppMovies.pageobjects.MoviesPage;
 import org.apache.commons.lang3.RandomUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -25,84 +25,84 @@ public class MyProfilePageTest extends Base {
 
 
 
-    /*@Test
+    @Test
     public void pageProfileDisplayed() {
-        moviesPage = new MoviesPage();
-        myProfilePage = moviesPage.goToProfile();
-        String actualResult = myProfilePage.getCurrURL();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+        String actualResult = moviesApplication.myProfilePage.getCurrURL();
         String expectedResult = "http://localhost:4200/myprofile";
         Assert.assertEquals(actualResult,expectedResult);
     }
 
     @Test
     public void goToLoginPage()  {
-        moviesPage = new MoviesPage();
-        myProfilePage = moviesPage.goToProfile();
-        loginPage = myProfilePage.clickOnBtnDeconnecter();
-        String actualURL = loginPage.getCurrURL();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+        moviesApplication.myProfilePage.clickOnBtnDeconnecter();
+        String actualURL = moviesApplication.loginPage.getCurrURL();
         String expectedURL = "http://localhost:4200/login";
         Assert.assertEquals(actualURL,expectedURL);
     }
 
     @Test
     public void isMovieCardDsiplayed(){
-        moviesPage = new MoviesPage();
-        myProfilePage = moviesPage.goToProfile();
-        boolean result = myProfilePage.movieCardDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+        boolean result = moviesApplication.myProfilePage.movieCardDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void removeMovieSuccess() {
-        moviesPage = new MoviesPage();
-        myProfilePage = moviesPage.goToProfile();
-        boolean result = myProfilePage.removeMovieFromMyProfile();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+        boolean result = moviesApplication.myProfilePage.removeMovieFromMyProfile();
         Assert.assertTrue(result);
     }
 
     @Test
     public void cancelRemoveMovie() {
-        moviesPage = new MoviesPage();
-        myProfilePage = moviesPage.goToProfile();
-        boolean result = myProfilePage.cancelRemoveMovieFromMyProfile();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+        boolean result = moviesApplication.myProfilePage.cancelRemoveMovieFromMyProfile();
         Assert.assertTrue(result);
     }
 
     @Test
     public void imageMovieIsDisplayed() {
-        moviesPage = new MoviesPage();
-        myProfilePage = moviesPage.goToProfile();
-        boolean result = myProfilePage.imgMovieIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+        boolean result = moviesApplication.myProfilePage.imgMovieIsDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void titleMovieIsDisplayed() {
-       moviesPage = new MoviesPage();
-       myProfilePage = moviesPage.goToProfile();
-       boolean result = myProfilePage.titleMovieIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+       boolean result = moviesApplication.myProfilePage.titleMovieIsDisplayed();
        Assert.assertTrue(result);
     }
 
     @Test
     public void userRatingIsDisplayed() {
-        moviesPage = new MoviesPage();
-        myProfilePage = moviesPage.goToProfile();
-        boolean result = myProfilePage.userRatingMovieIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+        boolean result = moviesApplication.myProfilePage.userRatingMovieIsDisplayed();
         Assert.assertTrue(result);
-    }*/
+    }
 
     @Test
     public void updateUserRating() throws Exception {
-        moviesPage = new MoviesPage();
-        myProfilePage = moviesPage.goToProfile();
-        if(myProfilePage.imgMovieIsDisplayed()){
-            String rating = myProfilePage.getUserRatingMovie();
-            movieDetailsPage = myProfilePage.goToAllmovies();
-            movieDetailsPage.addRatingAndGoToMyprofile(formatted);
-            String newRating = myProfilePage.getUserRatingMovie();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+        if(moviesApplication.myProfilePage.imgMovieIsDisplayed()){
+            String rating = moviesApplication.myProfilePage.getUserRatingMovie();
+            moviesApplication.myProfilePage.goToAllmovies();
+            moviesApplication.movieDetailsPage.addRatingAndGoToMyprofile(formatted);
+            String newRating = moviesApplication.myProfilePage.getUserRatingMovie();
             test.info("old rating:" + rating + "     ||     new rating:" + newRating);
-            Assert.assertTrue(myProfilePage.updateUserRatingMovie("My rating: "+formatted));
+            Assert.assertTrue(moviesApplication.myProfilePage.updateUserRatingMovie("My rating: "+formatted));
         }
         else {
             test.warning("user don't have movie to update");
@@ -112,14 +112,14 @@ public class MyProfilePageTest extends Base {
     }
 
 
-    /*@Test
+    @Test
     public void startRatingIsDisplayed() {
-        moviesPage = new MoviesPage();
-        myProfilePage = moviesPage.goToProfile();
-        boolean res = myProfilePage.titleMovieIsDisplayed();
-        boolean result = myProfilePage.startRatingIsDisplayed(res);
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.goToProfile();
+        boolean res = moviesApplication.myProfilePage.titleMovieIsDisplayed();
+        boolean result = moviesApplication.myProfilePage.startRatingIsDisplayed(res);
         Assert.assertTrue(result);
-    }*/
+    }
 
 
 }

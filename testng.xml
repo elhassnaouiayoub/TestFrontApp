@@ -9,9 +9,9 @@
         <classes>
             <class name="com.AppMovies.testcases.LoginPageTest"/>
             <class name="com.AppMovies.testcases.RegisterPageTest"/>
-            <class name="com.AppMovies.testcases.MoviesPageTest"/>
-            <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
             <class name="com.AppMovies.testcases.MyProfilePageTest"/>
+            <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
+            <class name="com.AppMovies.testcases.MoviesPageTest"/>
         </classes>
     </test>
 

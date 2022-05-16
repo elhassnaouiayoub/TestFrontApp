@@ -3,6 +3,8 @@ package com.AppMovies.actiondriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
 
 import java.io.File;
@@ -13,9 +15,15 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import static com.AppMovies.base.Base.driver;
 
 public class Action {
+    public static WebDriver driver;
+
+    public Action(WebDriver driver){
+        this.driver = driver;
+
+        PageFactory.initElements(driver,this);
+    }
 
     public static void scrollByVisiblityOfElement(WebDriver driver, WebElement ele) {
         JavascriptExecutor js = (JavascriptExecutor) driver;

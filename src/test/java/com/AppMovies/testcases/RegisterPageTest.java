@@ -1,14 +1,16 @@
 package com.AppMovies.testcases;
 
+import com.AppMovies.automationApplication.MoviesApplication;
 import com.AppMovies.base.Base;
 import com.AppMovies.pageobjects.LoginPage;
-import com.AppMovies.pageobjects.RegisterPage;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.github.javafaker.Faker;
 
+
 public class RegisterPageTest extends Base {
+
 
     public static String randomEmail() {
         Faker faker = new Faker();
@@ -25,43 +27,47 @@ public class RegisterPageTest extends Base {
 
     @Test
     public void addUser() throws InterruptedException {
-        loginPage = new LoginPage();
-        registerPage = loginPage.goToRegister();
-        registerPage = new RegisterPage();
-        loginPage = registerPage.register(username,email,password,confirmPassword);
-        getDriver().switchTo().alert().accept();
-        boolean result = loginPage.logintextIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.loginPage.goToRegister();
+        moviesApplication.registerPage.register(username,email,password,confirmPassword);
+        moviesApplication.registerPage.clickOnSignup();
+        moviesApplication.registerPage.verifyMessageAlert();
+        /*String alertMSG = moviesApplication.registerPage.verifyMessageAlert();
+        String expectedMSG = "Signup Successfull";
+        Assert.assertEquals(alertMSG,expectedMSG);*/
+        boolean result = moviesApplication.loginPage.logintextIsDisplayed();
         Assert.assertTrue(result);
+
     }
 
-    @Test
+   @Test
     public void InvaliedRegister() throws InterruptedException {
-        loginPage = new LoginPage();
-        registerPage = loginPage.goToRegister();
-        registerPage = new RegisterPage();
-        loginPage = registerPage.register(username,"",password,confirmPassword);
-        boolean result = registerPage.registerTextIsDisplayed();
-        Assert.assertTrue(result);
+       moviesApplication = MoviesApplication.getMoviesApplication(driver);
+       moviesApplication.loginPage.goToRegister();
+       moviesApplication.registerPage.register(username,"",password,confirmPassword);
+       moviesApplication.registerPage.clickOnSignup();
+       boolean result = moviesApplication.registerPage.registerTextIsDisplayed();
+       Assert.assertTrue(result);
     }
 
-    @Test
+   /* @Test
     public void confirmPassword() throws InterruptedException {
-        loginPage = new LoginPage();
-        registerPage = loginPage.goToRegister();
-        registerPage = new RegisterPage();
-        loginPage = registerPage.register(username,email,password, RandomStringUtils.random(length, useLetters, useNumbers));
-        boolean result = registerPage.registerTextIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.loginPage.goToRegister();
+        moviesApplication.registerPage.register(username,email,password, RandomStringUtils.random(length, useLetters, useNumbers));
+        moviesApplication.registerPage.clickOnSignup();
+        boolean result = moviesApplication.registerPage.registerTextIsDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void goToLogin() {
-        loginPage = new LoginPage();
-        registerPage = loginPage.goToRegister();
-        loginPage = registerPage.goToLogin();
-        boolean result = loginPage.logintextIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.loginPage.goToRegister();
+        moviesApplication.registerPage.goToLogin();
+        boolean result = moviesApplication.loginPage.logintextIsDisplayed();
         Assert.assertTrue(result);
     }
-
+*/
 
 }

@@ -1,7 +1,7 @@
 package com.AppMovies.testcases;
 
+import com.AppMovies.automationApplication.MoviesApplication;
 import com.AppMovies.base.Base;
-import com.AppMovies.pageobjects.MoviesPage;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -25,24 +25,24 @@ public class MoviesPageTest extends Base {
 
     @Test
     public void movieCardIsDisplayed(){
-        moviesPage = new MoviesPage();
-        boolean result = moviesPage.movieCardDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        boolean result = moviesApplication.moviesPage.movieCardDisplayed();
         assertTrue(result);
     }
 
     @Test
     public void clickOnMovieCard() {
-        moviesPage = new MoviesPage();
-        movieDetailsPage = moviesPage.clickMovieCard();
-        String actualURL = movieDetailsPage.getCurrURL();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.clickMovieCard();
+        String actualURL = moviesApplication.movieDetailsPage.getCurrURL();
         String expectedURl = "http://localhost:4200/movies/";
         assertTrue(actualURL.contains(expectedURl));
     }
 
     @Test
-    public void searchInvalaibleMovie() throws InterruptedException {
-        moviesPage = new MoviesPage();
-        boolean result = moviesPage.searchMovie(movieName);
+    public void searchInvalaibleMovie() {
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        boolean result = moviesApplication.moviesPage.searchMovie(movieName);
         Assert.assertFalse(result);
 
     }
@@ -50,31 +50,31 @@ public class MoviesPageTest extends Base {
     @Test
     public void searchAvalaibleMovie() {
         String movieName = "Amb";
-        moviesPage = new MoviesPage();
-        moviesPage.searchMovie(movieName);
-        String title = moviesPage.getMovieTitle();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        moviesApplication.moviesPage.searchMovie(movieName);
+        String title = moviesApplication.moviesPage.getMovieTitle();
         assertTrue(title.contains(movieName));
 
     }
 
     @Test
     public void imageCardMovieIsDispalyed() {
-        moviesPage = new MoviesPage();
-        boolean result = moviesPage.imgMovieIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        boolean result = moviesApplication.moviesPage.imgMovieIsDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void titleCardMovieIsDispalyed() {
-        moviesPage = new MoviesPage();
-        boolean result = moviesPage.titleMovieIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        boolean result = moviesApplication.moviesPage.titleMovieIsDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void officialRatingMovieIsDispalyed() {
-        moviesPage = new MoviesPage();
-        boolean result = moviesPage.officialRatingMovieIsDisplayed();
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        boolean result = moviesApplication.moviesPage.officialRatingMovieIsDisplayed();
         Assert.assertTrue(result);
     }
 
