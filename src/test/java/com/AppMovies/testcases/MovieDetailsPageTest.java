@@ -26,12 +26,12 @@ public class MovieDetailsPageTest extends Base {
 
     @BeforeMethod
     public void login() throws InterruptedException {
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         factory.login();
     }
 
     @Test
     public void descDisplayed() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.clickMovieCard();
         boolean result = moviesApplication.movieDetailsPage.descIsDisplayed();
         Assert.assertTrue(result);
@@ -40,7 +40,6 @@ public class MovieDetailsPageTest extends Base {
 
     @Test
     public void clickOnRatingBtn() throws Exception {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.clickMovieCard();
         moviesApplication.movieDetailsPage.clickEnterRating();
         boolean result = moviesApplication.movieDetailsPage.titleDisplayed();
@@ -49,7 +48,6 @@ public class MovieDetailsPageTest extends Base {
 
     @Test
     public void inputElementEnabled() throws Exception {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.clickMovieCard();
         moviesApplication.movieDetailsPage.clickEnterRating();
         boolean result = moviesApplication.movieDetailsPage.inputRatingElementEnabled();
@@ -58,7 +56,6 @@ public class MovieDetailsPageTest extends Base {
 
     @Test
     public void sendRatingSucces() throws Exception {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.clickMovieCard();
         moviesApplication.movieDetailsPage.clickEnterRating();
         moviesApplication.movieDetailsPage.setEnterRating(Float.parseFloat(formatted));
@@ -68,7 +65,6 @@ public class MovieDetailsPageTest extends Base {
 
     @Test
     public void sendEmptyRatingorInvalid() throws Exception {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.clickMovieCard();
         moviesApplication.movieDetailsPage.clickEnterRating();
         moviesApplication.movieDetailsPage.setEmptyRating(falseRating);
@@ -78,7 +74,6 @@ public class MovieDetailsPageTest extends Base {
 
     @Test
     public void backToAllMovies(){
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.clickMovieCard();
         moviesApplication.movieDetailsPage.goToAllMovies();
         String actualURL = moviesApplication.moviesPage.getCurrURL();
@@ -88,7 +83,6 @@ public class MovieDetailsPageTest extends Base {
 
     @Test
     public void goToMyProfile(){
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.clickMovieCard();
         moviesApplication.movieDetailsPage.clickMyProfile();
         String actualURL = moviesApplication.myProfilePage.getCurrURL();

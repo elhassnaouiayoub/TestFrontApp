@@ -20,6 +20,7 @@ public class MyProfilePageTest extends Base {
 
     @BeforeMethod
     public void login() throws InterruptedException {
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         factory.login();
     }
 
@@ -27,7 +28,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void pageProfileDisplayed() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
         String actualResult = moviesApplication.myProfilePage.getCurrURL();
         String expectedResult = "http://localhost:4200/myprofile";
@@ -36,7 +36,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void goToLoginPage()  {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
         moviesApplication.myProfilePage.clickOnBtnDeconnecter();
         String actualURL = moviesApplication.loginPage.getCurrURL();
@@ -46,7 +45,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void isMovieCardDsiplayed(){
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.movieCardDisplayed();
         Assert.assertTrue(result);
@@ -54,7 +52,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void removeMovieSuccess() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.removeMovieFromMyProfile();
         Assert.assertTrue(result);
@@ -62,7 +59,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void cancelRemoveMovie() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.cancelRemoveMovieFromMyProfile();
         Assert.assertTrue(result);
@@ -70,7 +66,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void imageMovieIsDisplayed() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.imgMovieIsDisplayed();
         Assert.assertTrue(result);
@@ -78,7 +73,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void titleMovieIsDisplayed() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
        boolean result = moviesApplication.myProfilePage.titleMovieIsDisplayed();
        Assert.assertTrue(result);
@@ -86,7 +80,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void userRatingIsDisplayed() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.userRatingMovieIsDisplayed();
         Assert.assertTrue(result);
@@ -94,7 +87,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void updateUserRating() throws Exception {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
         if(moviesApplication.myProfilePage.imgMovieIsDisplayed()){
             String rating = moviesApplication.myProfilePage.getUserRatingMovie();
@@ -114,7 +106,6 @@ public class MyProfilePageTest extends Base {
 
     @Test
     public void startRatingIsDisplayed() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.goToProfile();
         boolean res = moviesApplication.myProfilePage.titleMovieIsDisplayed();
         boolean result = moviesApplication.myProfilePage.startRatingIsDisplayed(res);

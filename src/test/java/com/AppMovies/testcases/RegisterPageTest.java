@@ -5,12 +5,12 @@ import com.AppMovies.base.Base;
 import com.AppMovies.pageobjects.LoginPage;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.github.javafaker.Faker;
 
 
 public class RegisterPageTest extends Base {
-
 
     public static String randomEmail() {
         Faker faker = new Faker();
@@ -25,9 +25,15 @@ public class RegisterPageTest extends Base {
     String password = RandomStringUtils.random(length, useLetters, useNumbers);
     String confirmPassword = password;
 
+
+    @BeforeMethod
+    public void init(){
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+    }
+
+
     @Test
     public void addUser() throws InterruptedException {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.loginPage.goToRegister();
         moviesApplication.registerPage.register(username,email,password,confirmPassword);
         moviesApplication.registerPage.clickOnSignup();
@@ -42,7 +48,6 @@ public class RegisterPageTest extends Base {
 
    @Test
     public void InvaliedRegister() throws InterruptedException {
-       moviesApplication = MoviesApplication.getMoviesApplication(driver);
        moviesApplication.loginPage.goToRegister();
        moviesApplication.registerPage.register(username,"",password,confirmPassword);
        moviesApplication.registerPage.clickOnSignup();
@@ -50,9 +55,8 @@ public class RegisterPageTest extends Base {
        Assert.assertTrue(result);
     }
 
-   /* @Test
+    @Test
     public void confirmPassword() throws InterruptedException {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.loginPage.goToRegister();
         moviesApplication.registerPage.register(username,email,password, RandomStringUtils.random(length, useLetters, useNumbers));
         moviesApplication.registerPage.clickOnSignup();
@@ -62,12 +66,11 @@ public class RegisterPageTest extends Base {
 
     @Test
     public void goToLogin() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.loginPage.goToRegister();
         moviesApplication.registerPage.goToLogin();
         boolean result = moviesApplication.loginPage.logintextIsDisplayed();
         Assert.assertTrue(result);
     }
-*/
+
 
 }

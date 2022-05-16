@@ -44,6 +44,10 @@ public class LoginPage extends Action {
         Thread.sleep(100);
     }
 
+    public void acceptAlert(){
+        driver.switchTo().alert().accept();
+    }
+
     public String getCurrURL(){
         return Action.getCurrentURL(driver);
     }
