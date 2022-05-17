@@ -20,19 +20,18 @@ public class MoviesPageTest extends Base {
 
     @BeforeMethod
     public void login() throws InterruptedException {
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         factory.login();
     }
 
     @Test
     public void movieCardIsDisplayed(){
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         boolean result = moviesApplication.moviesPage.movieCardDisplayed();
         assertTrue(result);
     }
 
     @Test
     public void clickOnMovieCard() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.clickMovieCard();
         String actualURL = moviesApplication.movieDetailsPage.getCurrURL();
         String expectedURl = "http://localhost:4200/movies/";
@@ -41,7 +40,6 @@ public class MoviesPageTest extends Base {
 
     @Test
     public void searchInvalaibleMovie() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         boolean result = moviesApplication.moviesPage.searchMovie(movieName);
         Assert.assertFalse(result);
 
@@ -50,7 +48,6 @@ public class MoviesPageTest extends Base {
     @Test
     public void searchAvalaibleMovie() {
         String movieName = "Amb";
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         moviesApplication.moviesPage.searchMovie(movieName);
         String title = moviesApplication.moviesPage.getMovieTitle();
         assertTrue(title.contains(movieName));
@@ -59,23 +56,29 @@ public class MoviesPageTest extends Base {
 
     @Test
     public void imageCardMovieIsDispalyed() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         boolean result = moviesApplication.moviesPage.imgMovieIsDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void titleCardMovieIsDispalyed() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         boolean result = moviesApplication.moviesPage.titleMovieIsDisplayed();
         Assert.assertTrue(result);
     }
 
     @Test
     public void officialRatingMovieIsDispalyed() {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         boolean result = moviesApplication.moviesPage.officialRatingMovieIsDisplayed();
         Assert.assertTrue(result);
     }
 
+    @Test
+    public void ascendingRating(){
+        Assert.assertTrue(moviesApplication.moviesPage.ascendingRating());
+    }
+
+    @Test
+    public void descendingRating(){
+        Assert.assertTrue(moviesApplication.moviesPage.descendingRating());
+    }
 }
