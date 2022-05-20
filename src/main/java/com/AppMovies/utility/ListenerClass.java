@@ -2,8 +2,6 @@ package com.AppMovies.utility;
 import java.io.IOException;
 
 import com.AppMovies.actiondriver.Action;
-import com.AppMovies.base.Base;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;

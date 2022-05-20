@@ -94,7 +94,7 @@ public class MovieDetailsPage extends Action {
     }
 
     public void addRatingAndGoToMyprofile(String rating) throws Exception {
-        Action.fluentWait(driver,btnRating,5);
+        Action.fluentWait(driver,btnRating,10);
         Action.JSClick(driver,btnRating);
         Action.type(enterRating,rating);
         Action.JSClick(driver,btnOK);
