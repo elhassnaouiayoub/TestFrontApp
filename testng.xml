@@ -5,9 +5,13 @@
         <listener class-name="com.AppMovies.utility.ListenerClass"></listener>
     </listeners>
     <test verbose="2" preserve-order="true" name="All Test Cases">
-        <parameter name="browser" value="Edge"></parameter>
+        <parameter name="browser" value="Chrome"></parameter>
         <classes>
+            <class name="com.AppMovies.testcases.LoginPageTest"/>
+            <class name="com.AppMovies.testcases.RegisterPageTest"/>
             <class name="com.AppMovies.testcases.MyProfilePageTest"/>
+            <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
+            <class name="com.AppMovies.testcases.MoviesPageTest"/>
         </classes>
     </test>
 
