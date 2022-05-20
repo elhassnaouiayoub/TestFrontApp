@@ -84,12 +84,12 @@ public class MyProfilePage extends Action {
         else return true;
     }
 
-    public boolean removeMovieFromMyProfile() {
+    public boolean removeMovieFromMyProfile() throws Exception {
         int size = driver.findElements(By.className("mat-card-title")).size();
         if(size>1) {
             String title = movieTitle.getText();
             Action.click(driver, removeMovie);
-            Action.click(driver, yesDelete);
+            Action.JSClick(driver, yesDelete);
             Action.fluentWait(driver, cardMovie, 5);
             driver.navigate().refresh();
             Action.fluentWait(driver, movieTitle, 5);
@@ -100,7 +100,7 @@ public class MyProfilePage extends Action {
         }
         else if (size == 1){
             Action.click(driver, removeMovie);
-            Action.click(driver, yesDelete);
+            Action.JSClick(driver, yesDelete);
             return true;
         }
         else

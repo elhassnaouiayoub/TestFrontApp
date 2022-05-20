@@ -51,7 +51,7 @@ public class MyProfilePageTest extends Base {
     }
 
     @Test
-    public void removeMovieSuccess() {
+    public void removeMovieSuccess() throws Exception {
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.removeMovieFromMyProfile();
         Assert.assertTrue(result);
