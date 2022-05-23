@@ -20,7 +20,6 @@ public class MoviesPageTest extends Base {
 
     @BeforeMethod
     public void login() throws InterruptedException {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         factory.login();
     }
 

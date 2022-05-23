@@ -8,11 +8,6 @@ import org.testng.annotations.Test;
 
 public class LoginPageTest extends Base {
 
-    @BeforeMethod
-    public void init(){
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
-    }
-
     @Test
     public void loginTextDisplayed(){
         boolean result = moviesApplication.loginPage.logintextIsDisplayed();
@@ -29,8 +24,8 @@ public class LoginPageTest extends Base {
 
     @Test
     public void login() throws InterruptedException {
-        String username = prop.getProperty("username");
-        String password = prop.getProperty("password");
+        String username = configProperties.getPropertyUsername();
+        String password = configProperties.getPropertyPassword();
         moviesApplication.loginPage.login(username,password);
         moviesApplication.loginPage.acceptAlert();
         boolean result = moviesApplication.moviesPage.btnIsDisplayed();
@@ -47,7 +42,7 @@ public class LoginPageTest extends Base {
 
     @Test
     public void invalidEnter() throws InterruptedException {
-        String username = prop.getProperty("username");
+        String username = configProperties.getPropertyUsername();
         String password = "";
         moviesApplication.loginPage.login(username,password);
         String actualURL = moviesApplication.loginPage.getCurrURL();

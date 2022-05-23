@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <listeners>
-        <listener class-name="com.AppMovies.utility.ListenerClass"></listener>
+        <listener class-name="com.AppMovies.utility.ListenerClass"/>
     </listeners>
     <test verbose="2" preserve-order="true" name="All Test Cases">
-        <parameter name="browser" value="Chrome"></parameter>
+        <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="com.AppMovies.testcases.LoginPageTest"/>
-            <class name="com.AppMovies.testcases.RegisterPageTest"/>
             <class name="com.AppMovies.testcases.MyProfilePageTest"/>
+            <class name="com.AppMovies.testcases.RegisterPageTest"/>
             <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
             <class name="com.AppMovies.testcases.MoviesPageTest"/>
         </classes>
