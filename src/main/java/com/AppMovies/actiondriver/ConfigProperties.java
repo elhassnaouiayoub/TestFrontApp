@@ -6,11 +6,12 @@ import java.util.Properties;
 public class ConfigProperties {
 
     Properties properties = new Properties();
-    private static final String PATH = "C:\\Users\\aelhassnaoui\\Desktop\\TestApp\\Configuration\\config.properties";
-
+    static String dir = System.getProperty("user.dir");
+    private static final String PATH = dir + "\\Configuration\\config.properties";
 
     public ConfigProperties(){
         try {
+            System.out.println(PATH);
             OutputStream outputStream = new FileOutputStream(PATH);
             properties.setProperty("url", "http://localhost:4200/login");
             properties.store(outputStream, null);
