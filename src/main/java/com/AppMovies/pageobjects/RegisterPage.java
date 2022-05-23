@@ -1,14 +1,9 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
-import java.util.concurrent.TimeUnit;
 
 
 public class RegisterPage extends Action {

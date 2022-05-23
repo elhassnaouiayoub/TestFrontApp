@@ -1,27 +1,38 @@
 package com.AppMovies.testcases;
 
-import com.AppMovies.automationApplication.MoviesApplication;
+import com.AppMovies.actiondriver.Action;
 import com.AppMovies.base.Base;
-import org.apache.commons.lang3.RandomUtils;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.text.DecimalFormat;
-
 import static com.AppMovies.utility.ExtentManager.test;
+
 
 public class MyProfilePageTest extends Base {
 
-    float trueRating = Float.valueOf(RandomUtils.nextFloat(0,10));
-    DecimalFormat decimalFormat = new DecimalFormat("#.#");
-    String formatted = decimalFormat.format(trueRating).replaceAll(",", ".");
 
 
     @BeforeMethod
     public void login() throws InterruptedException {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         factory.login();
+    }
+
+    @Test()
+    public void startRatingIsDisplayed() {
+        moviesApplication.moviesPage.goToProfile();
+        Assert.assertTrue(moviesApplication.myProfilePage.startRatingIsDisplayed());
+    }
+
+    @Test(dependsOnMethods = "startRatingIsDisplayed")
+    public void addMovieToMyCatalog() throws Exception {
+        moviesApplication.moviesPage.goToProfile();
+        moviesApplication.myProfilePage.clickOnStartRatingAndSelectMovie();
+        moviesApplication.movieDetailsPage.clickEnterRating();
+        moviesApplication.movieDetailsPage.setEnterRating();
+        moviesApplication.myProfilePage.clickMyProfile();
+        Assert.assertTrue(moviesApplication.myProfilePage.titleMovieIsDisplayed());
     }
 
 
@@ -43,74 +54,68 @@ public class MyProfilePageTest extends Base {
         Assert.assertEquals(actualURL,expectedURL);
     }
 
-    @Test
+    @Test(dependsOnMethods = "addMovieToMyCatalog")
     public void isMovieCardDsiplayed(){
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.movieCardDisplayed();
         Assert.assertTrue(result);
     }
 
-    @Test
+
+    @Test(dependsOnMethods = "cancelRemoveMovie")
     public void removeMovieSuccess() throws Exception {
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.removeMovieFromMyProfile();
         Assert.assertTrue(result);
+
     }
 
-    @Test
+    @Test(dependsOnMethods = "addMovieToMyCatalog")
     public void cancelRemoveMovie() {
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.cancelRemoveMovieFromMyProfile();
         Assert.assertTrue(result);
     }
 
-    @Test
+    @Test(dependsOnMethods = "addMovieToMyCatalog")
     public void imageMovieIsDisplayed() {
         moviesApplication.moviesPage.goToProfile();
         boolean result = moviesApplication.myProfilePage.imgMovieIsDisplayed();
         Assert.assertTrue(result);
     }
 
-    @Test
+    @Test(dependsOnMethods = "addMovieToMyCatalog")
     public void titleMovieIsDisplayed() {
         moviesApplication.moviesPage.goToProfile();
        boolean result = moviesApplication.myProfilePage.titleMovieIsDisplayed();
        Assert.assertTrue(result);
     }
 
-    @Test
+    @Test(dependsOnMethods = "addMovieToMyCatalog")
     public void userRatingIsDisplayed() {
         moviesApplication.moviesPage.goToProfile();
-        boolean result = moviesApplication.myProfilePage.userRatingMovieIsDisplayed();
-        Assert.assertTrue(result);
+        Assert.assertTrue(moviesApplication.myProfilePage.userRatingMovieIsDisplayed());
     }
 
-    @Test
+    @Test(dependsOnMethods = "addMovieToMyCatalog")
     public void updateUserRating() throws Exception {
         moviesApplication.moviesPage.goToProfile();
         if(moviesApplication.myProfilePage.imgMovieIsDisplayed()){
             String rating = moviesApplication.myProfilePage.getUserRatingMovie();
-            moviesApplication.myProfilePage.goToAllmovies();
-            moviesApplication.movieDetailsPage.addRatingAndGoToMyprofile(formatted);
-            String newRating = moviesApplication.myProfilePage.getUserRatingMovie();
+            String newRating = Action.getFloatNumber();
+            moviesApplication.myProfilePage.goToMovieDetails();
+            moviesApplication.movieDetailsPage.addRatingAndGoToMyprofile(newRating);
+            //String newRating = moviesApplication.myProfilePage.getUserRatingMovie();
             test.info("old rating:" + rating + "     ||     new rating:" + newRating);
-            Assert.assertTrue(moviesApplication.myProfilePage.updateUserRatingMovie("My rating: "+formatted));
+            Assert.assertTrue(moviesApplication.myProfilePage.updateUserRatingMovie("My rating: "+newRating));
         }
         else {
-            test.warning("user don't have movie to update");
+            test.warning("user doesn't have movie to update");
         }
-
-
     }
 
 
-    @Test
-    public void startRatingIsDisplayed() {
-        moviesApplication.moviesPage.goToProfile();
-        boolean res = moviesApplication.myProfilePage.titleMovieIsDisplayed();
-        boolean result = moviesApplication.myProfilePage.startRatingIsDisplayed(res);
-        Assert.assertTrue(result);
-    }
+
 
 
 }

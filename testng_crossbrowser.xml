@@ -7,33 +7,33 @@
     <test verbose="2" preserve-order="true" name="ChromeBrowser">
         <parameter name="browser" value="Chrome"></parameter>
         <classes>
-            <class name="com.AppMovies.testcases.LoginPageTest"/>
             <class name="com.AppMovies.testcases.RegisterPageTest"/>
+            <class name="com.AppMovies.testcases.MyProfilePageTest"/>
+            <class name="com.AppMovies.testcases.LoginPageTest"/>
             <class name="com.AppMovies.testcases.MoviesPageTest"/>
             <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
-            <class name="com.AppMovies.testcases.MyProfilePageTest"/>
         </classes>
     </test>
 
     <test verbose="2" preserve-order="true" name="FireFoxBrowser">
         <parameter name="browser" value="FireFox"></parameter>
         <classes>
-            <class name="com.AppMovies.testcases.LoginPageTest"/>
             <class name="com.AppMovies.testcases.RegisterPageTest"/>
+            <class name="com.AppMovies.testcases.MyProfilePageTest"/>
+            <class name="com.AppMovies.testcases.LoginPageTest"/>
             <class name="com.AppMovies.testcases.MoviesPageTest"/>
             <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
-            <class name="com.AppMovies.testcases.MyProfilePageTest"/>
         </classes>
     </test>
 
     <test verbose="2" preserve-order="true" name="EdgeBrowser">
         <parameter name="browser" value="Edge"></parameter>
         <classes>
-            <class name="com.AppMovies.testcases.LoginPageTest"/>
             <class name="com.AppMovies.testcases.RegisterPageTest"/>
+            <class name="com.AppMovies.testcases.MyProfilePageTest"/>
+            <class name="com.AppMovies.testcases.LoginPageTest"/>
             <class name="com.AppMovies.testcases.MoviesPageTest"/>
             <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
-            <class name="com.AppMovies.testcases.MyProfilePageTest"/>
         </classes>
     </test>
 

@@ -54,9 +54,7 @@ public class MovieDetailsPage extends Action {
         Action.click(driver,allMovies);
     }
 
-    public boolean successElemIsDisplayed() throws Exception {
-        Action.JSClick(driver,btnOK);
-        Action.fluentWait(driver,elmSuccess,5);
+    public boolean successElemIsDisplayed() {
         return Action.isDisplayed(driver,elmSuccess);
     }
 
@@ -69,8 +67,10 @@ public class MovieDetailsPage extends Action {
         return Action.isEnabled(driver,enterRating);
     }
 
-    public void setEnterRating(float rating){
-        Action.type(enterRating, String.valueOf(rating));
+    public void setEnterRating() throws Exception {
+        Action.type(enterRating, Action.getFloatNumber());
+        Action.JSClick(driver,btnOK);
+        Action.fluentWait(driver,elmSuccess,5);
     }
 
     public void setEmptyRating(String rating){

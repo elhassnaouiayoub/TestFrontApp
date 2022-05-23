@@ -15,9 +15,7 @@ import java.text.DecimalFormat;
 public class MovieDetailsPageTest extends Base {
 
 
-    float trueRating = Float.valueOf(RandomUtils.nextFloat(0,10));
-    DecimalFormat decimalFormat = new DecimalFormat("#.#");
-    String formatted = decimalFormat.format(trueRating).replaceAll(",", ".");
+
 
 
     int length = 2;
@@ -26,7 +24,6 @@ public class MovieDetailsPageTest extends Base {
 
     @BeforeMethod
     public void login() throws InterruptedException {
-        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         factory.login();
     }
 
@@ -58,7 +55,7 @@ public class MovieDetailsPageTest extends Base {
     public void sendRatingSucces() throws Exception {
         moviesApplication.moviesPage.clickMovieCard();
         moviesApplication.movieDetailsPage.clickEnterRating();
-        moviesApplication.movieDetailsPage.setEnterRating(Float.parseFloat(formatted));
+        moviesApplication.movieDetailsPage.setEnterRating();
         boolean result = moviesApplication.movieDetailsPage.successElemIsDisplayed();
         Assert.assertTrue(result);
     }

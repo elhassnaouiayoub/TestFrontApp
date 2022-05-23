@@ -1,5 +1,6 @@
 package com.AppMovies.base;
 
+import com.AppMovies.actiondriver.ConfigProperties;
 import com.AppMovies.actiondriver.MyScreenRecorder;
 import com.AppMovies.automationApplication.MoviesApplication;
 import com.AppMovies.pageobjects.*;
@@ -18,30 +19,29 @@ import java.util.Properties;
 public class Base{
 
 
-    public static Properties prop;
     public static WebDriver driver;
     protected Factory factory = new Factory();
 
+    public static ConfigProperties configProperties = new ConfigProperties();
     public static MoviesApplication moviesApplication;
 
 
+
     @BeforeSuite
-    public void loadConfig(){
+    public void loadConfig() {
         ExtentManager.setExtent();
         DOMConfigurator.configure("log4j.xml");
-
-        try{
-            prop = new Properties();
-            FileInputStream ip = new FileInputStream(
-                    System.getProperty("user.dir") + "\\Configuration\\config.properties");
-            prop.load(ip);
-
-        }catch (FileNotFoundException e){
-            e.printStackTrace();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
     }
+
+    @Parameters("browser")
+    @BeforeTest
+    public void register(String browser) throws InterruptedException {
+        factory.launchApp(browser);
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
+        factory.register();
+        driver.quit();
+    }
+
 
 /*
     public static WebDriver getDriver(){
@@ -53,6 +53,7 @@ public class Base{
     @BeforeMethod
     public void setup(Method method, String browser) throws Exception {
         factory.launchApp(browser);
+        moviesApplication = MoviesApplication.getMoviesApplication(driver);
         MyScreenRecorder.startRecording(method.getName());
     }
 

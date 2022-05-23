@@ -1,13 +1,15 @@
 package com.AppMovies.actiondriver;
 
+
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
 
 import java.io.File;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -19,10 +21,21 @@ import java.util.concurrent.TimeUnit;
 public class Action {
     public static WebDriver driver;
 
+
+
     public Action(WebDriver driver){
         this.driver = driver;
 
         PageFactory.initElements(driver,this);
+    }
+
+
+
+    public static String getFloatNumber(){
+        float trueRating = Float.valueOf(RandomUtils.nextFloat(0,10));
+        DecimalFormat decimalFormat = new DecimalFormat("#.#");
+        String formatted = decimalFormat.format(trueRating).replaceAll(",", ".");
+        return formatted;
     }
 
     public static void scrollByVisiblityOfElement(WebDriver driver, WebElement ele) {

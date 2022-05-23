@@ -1,12 +1,15 @@
 package com.AppMovies.pageobjects;
 
 import com.AppMovies.actiondriver.Action;
+import com.github.tomakehurst.wiremock.WireMockServer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.junit.Rule;
 
 import static com.AppMovies.utility.ExtentManager.test;
+import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
 
 public class MyProfilePage extends Action {
@@ -103,9 +106,8 @@ public class MyProfilePage extends Action {
             Action.JSClick(driver, yesDelete);
             return true;
         }
-        else
-            test.warning("Movie don't exist");
-            return true;
+            test.warning("user doesn't have movie to update");
+            return false;
     }
 
 
@@ -122,33 +124,37 @@ public class MyProfilePage extends Action {
                 return false;
         }
         else
+            test.warning("user doesn't have movie");
             return true;
 
     }
 
     public boolean imgMovieIsDisplayed(){
         Action.fluentWait(driver,cardImage,5);
-        if(!(Action.isDisplayed(driver,cardImage))){
-            test.warning("user doesn't have a movie");
+        if( Action.isDisplayed(driver,cardImage))
+        return true;
+        else{
+            test.warning("user doesn't have movie");
             return false;
         }
-        else return true;
     }
 
     public boolean titleMovieIsDisplayed(){
-        if(!(Action.isDisplayed(driver,movieTitle))){
-            test.warning("user doesn't have a movie");
+       if(Action.isDisplayed(driver,movieTitle))
+            return true;
+       else{
+            test.warning("user doesn't have movie");
             return false;
         }
-        else return true;
     }
 
     public boolean userRatingMovieIsDisplayed(){
-        if(!(Action.isDisplayed(driver,userRating))){
-            test.warning("user doesn't have a movie");
+        if(Action.isDisplayed(driver,userRating))
+            return true;
+        else{
+            test.warning("user doesn't have movie");
             return false;
         }
-        else return true;
     }
 
 
@@ -156,7 +162,7 @@ public class MyProfilePage extends Action {
         return userRating.getText();
     }
 
-    public void goToAllmovies(){
+    public void goToMovieDetails(){
         Action.click(driver,movieTitle);
     }
 
@@ -165,17 +171,27 @@ public class MyProfilePage extends Action {
         if((userRating.getText()).equalsIgnoreCase(rating)){
             return true;
         }
-        else
+        else {
+            test.warning("user doesn't have movie");
             return false;
+        }
     }
 
-    public boolean startRatingIsDisplayed(boolean res){
-        if(!(res)){
-            return Action.isDisplayed(driver,btnStartRating);
-        }
-        test.warning("User have a movie");
-        return true;
+    public boolean startRatingIsDisplayed(){
+       return Action.isDisplayed(driver,btnStartRating);
 
+    }
+
+    public void clickOnStartRatingAndSelectMovie(){
+        Action.click(driver,AllMovies);
+        Action.click(driver,movieTitle);
+
+    }
+
+    public void clickMyProfile() throws Exception {
+        Action.click(driver,closeBtn);
+        Action.fluentWait(driver,btnMyProfile,5);
+        Action.JSClick(driver,btnMyProfile);
     }
 
 
