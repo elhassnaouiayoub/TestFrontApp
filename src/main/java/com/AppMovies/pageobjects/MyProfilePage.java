@@ -172,13 +172,23 @@ public class MyProfilePage extends Action {
             return true;
         }
         else {
-            test.warning("user doesn't have movie");
             return false;
         }
     }
 
     public boolean startRatingIsDisplayed(){
        return Action.isDisplayed(driver,btnStartRating);
+
+    }
+
+    public boolean mockStartRatingIsDisplayed(){
+        if(Action.isDisplayed(driver,btnStartRating)){
+            return true;
+        }
+        else {
+            test.warning("User have a movie");
+            return true;
+        }
 
     }
 
