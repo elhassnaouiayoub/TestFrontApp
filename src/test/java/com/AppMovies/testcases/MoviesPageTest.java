@@ -46,7 +46,7 @@ public class MoviesPageTest extends Base {
 
     @Test
     public void searchAvalaibleMovie() {
-        String movieName = "Amb";
+        String movieName = "Sonic";
         moviesApplication.moviesPage.searchMovie(movieName);
         String title = moviesApplication.moviesPage.getMovieTitle();
         assertTrue(title.contains(movieName));

@@ -102,4 +102,12 @@ public class MovieDetailsPage extends Action {
         Action.fluentWait(driver,btnMyProfile,5);
         Action.JSClick(driver,btnMyProfile);
     }
+
+    public boolean addMockRatingAndGoToMyprofile(String rating) throws Exception {
+        Action.fluentWait(driver,btnRating,10);
+        Action.JSClick(driver,btnRating);
+        Action.type(enterRating,rating);
+        Action.JSClick(driver,btnOK);
+        return Action.isDisplayed(driver,elmSuccess);
+    }
 }

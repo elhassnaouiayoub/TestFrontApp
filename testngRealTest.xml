@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="Real Mode">
     <listeners>
         <listener class-name="com.AppMovies.utility.ListenerClass"/>
     </listeners>
-    <test verbose="2" preserve-order="true" name="All Test Cases">
+    <test verbose="2" preserve-order="true" name="real mode">
         <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="com.AppMovies.testcases.LoginPageTest"/>
             <class name="com.AppMovies.testcases.MyProfilePageTest"/>
             <class name="com.AppMovies.testcases.RegisterPageTest"/>
-            <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
             <class name="com.AppMovies.testcases.MoviesPageTest"/>
+            <class name="com.AppMovies.testcases.MovieDetailsPageTest"/>
         </classes>
     </test>
 
