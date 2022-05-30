@@ -22,7 +22,6 @@ public class MyProfilePageMockTest extends Base {
     public void startRatingIsDisplayed() {
         moviesApplication.moviesPage.goToProfile();
         Assert.assertTrue(moviesApplication.myProfilePage.mockStartRatingIsDisplayed());
-
     }
 
 
@@ -62,14 +61,6 @@ public class MyProfilePageMockTest extends Base {
         Assert.assertTrue(result);
     }
 
-
-    @Test()
-    public void removeMovieSuccess() throws Exception {
-        moviesApplication.moviesPage.goToProfile();
-        boolean result = moviesApplication.myProfilePage.removeMovieFromMyProfile();
-        Assert.assertTrue(result);
-
-    }
 
     @Test()
     public void cancelRemoveMovie() {
